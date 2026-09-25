@@ -1,0 +1,216 @@
+{
+    "indexTitle": "Kurt Cobain - Lettera a Boddah",
+    "webSite": "",
+    "logoUrl": "",
+    "dataUrl": "data/text/Cobain letter.xml",
+    "sourcesUrl": "data/text/sources.xml",
+    "analoguesUrl": "data/text/analogues.xml",
+    "sourcesTextsUrl": "data/text/sources/",
+    "singleImagesUrl": "data/images/single/",
+    "enableXMLdownload": true,
+    "visCollTextUrl": "",
+    "visCollStyleUrl": "",
+    "visCollSvg": "",
+    "visCollImageList": "",
+    "visCollDataModel": "",
+    "defaultViewMode": "imgTxt",
+    "availableViewModes": [
+        {
+            "label": "READING_TEXT",
+            "icon": "reading-txt",
+            "viewMode": "readingTxt",
+            "visible": true
+        },
+        {
+            "label": "IMAGE_TEXT",
+            "icon": "mode-imgTxt",
+            "viewMode": "imgTxt",
+            "visible": true
+        },
+        {
+            "label": "TEXT_TEXT",
+            "icon": "mode-txtTxt",
+            "viewMode": "txtTxt",
+            "visible": false
+        },
+        {
+            "label": "SOURCE_TEXT",
+            "icon": "mode-srcTxt",
+            "viewMode": "srcTxt",
+            "visible": false
+        },
+        {
+            "label": "COLLATION",
+            "icon": "mode-collation",
+            "viewMode": "collation",
+            "visible": false
+        },
+        {
+            "label": "MULTIPLE_RECENSIONS",
+            "icon": "mode-versions",
+            "viewMode": "versions",
+            "visible": false
+        },
+        {
+            "label": "3DHOP",
+            "icon": "mode-tdhop",
+            "viewMode": "tdhop",
+            "visible": false
+        }
+    ],
+    "defaultEdition": "diplomatic",
+    "showEditionLevelSelector": true,
+    "availableEditionLevel": [
+        {
+            "value": "diplomatic",
+            "label": "Trascrizione diplomatica",
+            "title": "Trascrizione diplomatica",
+            "visible": true
+        },
+        {
+            "value": "interpretative",
+            "label": "Traduzione italiana",
+            "title": "Traduzione italiana",
+            "visible": true
+        }
+    ],
+    "showDocumentSelector": false,
+    "showObjectSelector": false,
+    "enableNavBar": false,
+    "initNavBarOpened": false,
+    "thumbnailsButton": false,
+    "viscollButton": false,
+    "toolPinAppEntries": false,
+    "toolImageTextLinking": true,
+    "namedEntitiesSelector": true,
+    "namedEntitiesToHandle": [
+        {
+            "tagName": "persName",
+            "label": "Persone",
+            "available": true
+        },
+        {
+            "tagName": "placeName",
+            "label": "Luoghi",
+            "available": true
+        },
+        {
+            "tagName": "orgName",
+            "label": "Organizzazioni",
+            "available": true
+        }
+    ],
+    "otherEntitiesToHandle": [
+        {
+            "tagName": "term",
+            "label": "Concetti culturali",
+            "available": true,
+            "color": "#ffecb3"
+        },
+        {
+            "tagName": "quote",
+            "label": "Citazioni e allusioni",
+            "available": true,
+            "color": "#cfc"
+        },
+        {
+            "tagName": "rs",
+            "label": "Riferimenti descrittivi",
+            "available": false,
+            "color": "#cfc"
+        }
+    ],
+    "showInlineCriticalApparatus": false,
+    "showInlineSources": false,
+    "showInlineAnalogues": false,
+    "showReadingExponent": false,
+    "toolHeatMap": false,
+    "preferredWitness": "",
+    "skipWitnesses": "",
+    "maxWitsLoadTogether": 5,
+    "witnessesGroups": [],
+    "versions": [],
+    "listDef": "<listWit>, <listChange>",
+    "versionDef": "<witness>, <change>",
+    "fragmentMilestone": "<witStart>, <witEnd>",
+    "lacunaMilestone": "<lacunaStart>, <lacunaEnd>",
+    "notSignificantVariant": "[type=orthographic]",
+    "quoteDef": "<quote>",
+    "analogueDef": "<seg>,<ref[type=parallelPassage]>",
+    "possibleLemmaFilters": "resp",
+    "possibleVariantFilters": "",
+    "variantColorLight": "",
+    "variantColorDark": "",
+    "heatmapColor": "",
+    "variantColors": {
+        "type": {},
+        "cause": {}
+    },
+    "defaultBibliographicStyle": "Chicago",
+    "allowedBibliographicStyles": {
+        "Chicago": {
+            "label": "Chicago",
+            "enabled": true
+        },
+        "MLA": {
+            "label": "MLA",
+            "enabled": true
+        },
+        "APA": {
+            "label": "APA",
+            "enabled": false
+        }
+    },
+    "virtualKeyboardKeys": [],
+    "imageViewerOptions": {
+        "prefixUrl": "images/osd-images/",
+        "showRotationControl": true,
+        "showNavigator": true,
+        "visibilityRatio": 1,
+        "defaultZoomLevel": 0.7,
+        "panHorizontal": true,
+        "constrainDuringPan": true,
+        "minZoomLevel": 0.7,
+        "maxZoomLevel": 3.0,
+        "wrapVertical": false
+    },
+    "imageNormalizationCoefficient": 1265,
+    "languages": [
+        "en",
+        "it"
+    ],
+    "tdhopViewerOptions": {
+        "toolHome": false,
+        "toolZoomin": false,
+        "toolZoomout": false,
+        "toolLighting": false,
+        "toolLightControl": false,
+        "toolMeasure": false,
+        "toolPickPoint": false,
+        "toolPlaneSections": false,
+        "toolSolidColor": false,
+        "toolCamera": false,
+        "toolHotspot": false,
+        "toolFullScreen": false,
+        "toolSwitchModel": false,
+        "toolArrows": false,
+        "toolLightController": false,
+        "Model_1": {
+            "name": "",
+            "path": "data/models/multires/",
+            "mesh": ""
+        },
+        "Model_2": {
+            "name": "",
+            "path": "data/models/singleres/",
+            "mesh": ""
+        },
+        "Hotspots": {
+            "type": "",
+            "path": "data/models/singleres/",
+            "model": "",
+            "hotspotsdata": [],
+            "nextID": ""
+        }
+    }
+}
