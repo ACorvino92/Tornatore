@@ -243,3 +243,25 @@ tei-corr,
     clear: both;
     height: 36px;
 }
+
+/* ==========================================================
+   EVT 2 — righe 39–42: attribuzione grafica controversa
+   Il colore segnala una controversia attributiva; non una
+   seconda mano accertata.
+   ========================================================== */
+
+.orig[data-rend~="handwriting-disputed"],
+.orig[data-rend~="handwriting-disputed"] * {
+  color: #9b1c1c !important;
+  font-weight: 600 !important;
+}
+
+.lb[data-rend~="handwriting-disputed"] .lineN {
+  color: #9b1c1c !important;
+  font-weight: 700 !important;
+}
+
+.choice:hover .orig[data-rend~="handwriting-disputed"],
+.choice.hover .orig[data-rend~="handwriting-disputed"] {
+  color: #9b1c1c !important;
+}
