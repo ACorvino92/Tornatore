@@ -3,16 +3,52 @@
    Foglio di stile editoriale definitivo
    ============================================================== */
 
-/* Concetti culturali / termini controllati */
+/* --------------------------------------------------------------
+   PRINCIPIO GENERALE
+   Le categorie semantiche (term, quote) non sono evidenziate
+   automaticamente all'apertura. EVT 2 applica il colore solo
+   quando l'utente le seleziona dal menu delle entità.
+   -------------------------------------------------------------- */
+
+/* Concetti culturali / termini controllati
+   Nessun colore statico: il selettore EVT gestisce l'highlight. */
 .term,
 span.term,
 [class~="term"] {
-  background-color: rgba(255, 236, 179, 0.75) !important;
   color: inherit !important;
-  padding: 0 .08em !important;
+  padding: 0 !important;
 }
 
-/* Cancellature: resa sobria e non invasiva */
+/* --------------------------------------------------------------
+   CITAZIONI
+   A riposo nessuna sottolineatura. Al passaggio del mouse una
+   sottolineatura puntinata segnala che la citazione è interattiva.
+   L'eventuale fondo colorato viene applicato da EVT 2 soltanto
+   quando "Citazioni e allusioni" è selezionato.
+   -------------------------------------------------------------- */
+evt-quote span.quote,
+span.quote {
+  display: inline !important;
+}
+
+.quote .quote__text {
+  border-bottom: 0 !important;
+}
+
+.quote:hover .quote__text,
+.quote.over .quote__text {
+  border-bottom: 1px dotted currentColor !important;
+}
+
+.quote sup.iconbis-evt_quote-left,
+.quote sup.iconbis-evt_quote-right {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------
+   CANCELLAZIONI
+   Fenomeno diplomatico sempre visibile.
+   -------------------------------------------------------------- */
 .del,
 .DEL,
 span.del,
@@ -51,7 +87,22 @@ span.del span.supplied,
   white-space: nowrap !important;
 }
 
-/* Aggiunte sopralineari */
+/* Il gap resta silenzioso: il segnale grafico è già fornito
+   dal supplied editoriale ⟦…⟧. */
+.gap::before,
+.GAP::before,
+span.gap::before,
+gap::before,
+tei-gap::before,
+[class~="gap"]::before {
+  content: "" !important;
+}
+
+/* --------------------------------------------------------------
+   AGGIUNTE AUTOGRAFE
+   Nessun fondo colorato. Restano riconoscibili attraverso la
+   posizione sopralineare e una sottolineatura sottile.
+   -------------------------------------------------------------- */
 .add,
 .ADD,
 span.add,
@@ -61,15 +112,16 @@ tei-add,
 [class*=" add"],
 [class*="add "] {
   color: inherit !important;
-  background: rgba(159, 210, 138, 0.28) !important;
-  border-bottom: 1px solid rgba(80, 130, 70, 0.55) !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.55) !important;
   vertical-align: super !important;
   font-size: 0.82em !important;
   line-height: 0 !important;
-  padding: 0 .08em !important;
+  padding: 0 .04em !important;
 }
 
-/* Letture incerte */
+/* Letture incerte: sempre visibili come dato diplomatico. */
 .unclear,
 .UNCLEAR,
 span.unclear,
@@ -87,16 +139,6 @@ supplied,
 tei-supplied,
 [class~="supplied"] {
   font-style: italic !important;
-}
-
-/* Il gap resta silenzioso: il segnale grafico è già fornito da supplied. */
-.gap::before,
-.GAP::before,
-span.gap::before,
-gap::before,
-tei-gap::before,
-[class~="gap"]::before {
-  content: "" !important;
 }
 
 /* sic/corr */
@@ -119,25 +161,10 @@ tei-corr,
 }
 
 /* --------------------------------------------------------------
-   Citazioni
-   EVT 2 nasconde in alcune condizioni span.quote.
-   Forziamo la visualizzazione del testo della citazione e
-   rimuoviamo i piccoli marcatori grafici laterali.
-   -------------------------------------------------------------- */
-evt-quote span.quote,
-span.quote {
-  display: inline !important;
-}
-
-.quote sup.iconbis-evt_quote-left,
-.quote sup.iconbis-evt_quote-right {
-  display: none !important;
-}
-
-/* --------------------------------------------------------------
-   Ultime quattro righe: attribuzione grafica controversa
-   Il rosso è una convenzione editoriale, non l'assegnazione
-   certa a una seconda mano.
+   ULTIME QUATTRO RIGHE
+   Attribuzione grafica controversa.
+   Il rosso è una convenzione editoriale stabile, non una
+   assegnazione certa a una seconda mano.
    -------------------------------------------------------------- */
 .orig[data-rend~="handwriting-disputed"],
 .orig[data-rend~="handwriting-disputed"] * {
