@@ -115,9 +115,9 @@
         },
         {
             "tagName": "rs",
-            "label": "Riferimenti descrittivi",
+            "label": "Riferimenti indiretti",
             "available": false,
-            "color": "#cfc"
+            "color": "#dce6f1"
         }
     ],
     "showInlineCriticalApparatus": false,
@@ -174,7 +174,7 @@
         "maxZoomLevel": 3.0,
         "wrapVertical": false
     },
-    "imageNormalizationCoefficient": 1265,
+    "imageNormalizationCoefficient": 720,
     "languages": [
         "en",
         "it"
