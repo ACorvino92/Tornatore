@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="tei-cobain-letter-evt2" version="4.11.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="tei-cobain-letter-evt2" version="4.12.0">
   <teiHeader xml:lang="it">
     <fileDesc>
       <titleStmt>
@@ -15,7 +15,7 @@
           <name>Antonio Corvino</name>
         </respStmt>
       </titleStmt>
-      <publicationStmt>
+      <editionStmt><edition>Edizione digitale scientifica con trascrizione diplomatica, traduzione italiana, facsimile digitale, collegamento testo–immagine e arricchimento semantico.</edition></editionStmt><publicationStmt>
         <publisher>
           <abbr>UNISOB</abbr>
           <expan>Università degli Studi Suor Orsola Benincasa</expan>
@@ -23,70 +23,207 @@
         <pubPlace>Napoli</pubPlace>
         <date when="2026-09-30">2026-09-30</date>
         <idno type="project">Tesi_Tornatore</idno>
-        <availability status="restricted">
-          <p>Prototipo didattico e scientifico per tesi</p>
-        </availability>
+        <idno type="repository">https://github.com/ACorvino92/Tornatore</idno>
+        <idno type="project-site">https://acorvino92.github.io/Tornatore/</idno>
+        <availability status="free"><p>Edizione digitale pubblicamente consultabile online. 
+          La consultazione pubblica non implica il rilascio dei contenuti editoriali o delle riproduzioni sotto licenza aperta; 
+          i relativi diritti restano riservati ai rispettivi titolari, salvo diversa indicazione.</p></availability>
       </publicationStmt>
       <sourceDesc>
         <msDesc xml:id="ms-cobain-letter">
-  <msIdentifier><settlement>Seattle</settlement><institution>Seattle Police Department</institution><collection>Kurt D. Cobain death investigation file</collection><idno type="SPD-case-number">94-156500</idno><altIdentifier type="laboratory-report"><idno>Washington State Patrol Crime Laboratory Report 194-12204</idno></altIdentifier></msIdentifier><head>Kurt Cobain — Lettera a Boddah</head><msContents><msItem n="1" xml:id="msitem-cobain-letter"><author ref="#kurt-cobain">Kurt Cobain</author><title type="editorial">Lettera a Boddah</title><textLang mainLang="en">Inglese</textLang></msItem></msContents><physDesc><objectDesc form="sheet"><supportDesc><support>Testimone manoscritto su una sola facciata, noto attraverso riproduzione digitale; descrizione materiale estesa disponibile in Info.</support></supportDesc><layoutDesc><layout columns="1" writtenLines="42">42 righe fisiche mappate nel facsimile.</layout></layoutDesc></objectDesc><handDesc><p>Attribuzione a Kurt Cobain documentata dal WSP Report 194-12204; le ultime quattro righe sono registrate come area di attribuzione controversa.</p></handDesc></physDesc><history><origin><p><origPlace ref="#seattle">Seattle, Washington</origPlace>, <origDate when="1994-04">aprile 1994</origDate>.</p></origin><provenance><p>Riferimento documentario: Seattle Police Department, case no. 94-156500.</p></provenance></history></msDesc>
+  <msIdentifier>
+    <settlement>Seattle</settlement>
+    <institution>Seattle Police Department</institution>
+    <collection>Kurt D. Cobain death investigation file</collection>
+    <idno type="SPD-case-number">94-156500</idno>
+    <altIdentifier type="laboratory-report">
+      <idno>Washington State Patrol Crime Laboratory Report 194-12204</idno>
+    </altIdentifier>
+  </msIdentifier>
+          <head>Kurt Cobain — Lettera a Boddah</head>
+          <msContents>
+            <msItem n="1" xml:id="msitem-cobain-letter">
+              <author ref="#kurt-cobain">Kurt Cobain</author>
+              <title type="editorial">Lettera a Boddah</title>
+              <textLang mainLang="en">Inglese</textLang>
+            </msItem>
+          </msContents>
+          <physDesc>
+            <objectDesc form="sheet">
+              <supportDesc>
+                <support>Testimone manoscritto su una sola facciata, noto attraverso riproduzione digitale; descrizione materiale estesa disponibile in Info.</support>
+              </supportDesc>
+              <layoutDesc>
+                <layout columns="1" writtenLines="42">42 righe fisiche mappate nel facsimile.</layout>
+              </layoutDesc>
+            </objectDesc>
+            <handDesc><p>Attribuzione a Kurt Cobain documentata dal WSP Report 194-12204; le ultime quattro righe sono registrate come area di attribuzione controversa.</p>
+            </handDesc>
+          </physDesc>
+          <history>
+            <origin>
+              <p>
+                <origPlace ref="#seattle">Seattle, Washington</origPlace>, 
+                <origDate when="1994-04">aprile 1994</origDate>.
+              </p>
+            </origin>
+            <provenance>
+              <p>Riferimento documentario: Seattle Police Department, case no. 94-156500.</p>
+            </provenance>
+          </history>
+        </msDesc>
    <listBibl xml:id="documentary-bibliography">
       <bibl type="authority-control" xml:id="bibl-wikidata-authority">
         <title>Wikidata / Wikimedia open data</title>
         <note>Authority aperta usata per normalizzare persone, luoghi, organizzazioni e alcuni concetti culturali, mediante identificativi QID e URI quando disponibili.</note>
       </bibl>
-    <bibl xml:id="bibl-la-times-photos" type="documentary-context"><title>Los Angeles Times, Seattle police releases dozens of new Kurt Cobain photos</title><ptr target="https://www.latimes.com/entertainment/music/posts/la-et-ms-seattle-police-kurt-cobain-photos-20140328-story.html"/><note>Fonte giornalistica utile per il contesto fotografico: nota descritta in posizione originaria nella serra, su una fioriera e trattenuta da una penna; immagini da 35mm e Polaroid.</note></bibl><bibl xml:id="bibl-spd-case" type="documentary-reference"><author>Seattle Police Department</author><title>Case Investigation Report 94-156500</title><date when="2014-03-31">31 marzo 2014</date><ptr target="https://spdblotter.seattle.gov/2014/03/31/detectives-reviews-cobain-case-which-remains-closed/"/><note>Fonte istituzionale per il fascicolo investigativo e per la revisione del caso resa pubblica dal Seattle Police Department. La posizione ufficiale del dipartimento resta quella di un caso chiuso classificato come suicidio.</note></bibl><bibl xml:id="bibl-wsp-lab" type="forensic-report"><author>Washington State Patrol Crime Laboratory</author><title>Crime Laboratory Report, Laboratory No. 194-12204, Agency Case No. 94-156500</title><date when="1994-04-22">22 aprile 1994</date><ptr target="https://spdblotter.seattle.gov/wp-content/uploads/sites/11/2014/03/Notebook1.pdf"/><note>Rapporto ufficiale di esame documentale. Confronta la questioned note che inizia «Speaking from the tongue of...» con una nota di tre pagine su carta dell’Hotel Excelsior recante grafia nota di Kurt Cobain e conclude che la nota esaminata fu scritta da Cobain. La conclusione non distingue separatamente le ultime quattro righe.</note></bibl><bibl xml:id="bibl-burnett-2025" type="research-article"><author>Bryan R. Burnett; Michael Gregory; Felice Nunziata; Pietro Zuccarello; Cataldo Raffino; Gabriele Rotter; Michelle Wilkins</author><title>A Multidisciplinary Analysis of the Kurt Cobain Death</title><title level="j">International Journal of Forensic Sciences</title><date when="2025-11-06">6 novembre 2025</date><biblScope unit="volume">10</biblScope><biblScope unit="issue">4</biblScope><biblScope unit="page">1–35</biblScope><idno type="DOI">10.23880/ijfsc-16000450</idno><ptr target="https://medwinpublishers.com/article/IJFSC/10.23880/ijfsc-16000450/full"/><note>Articolo di ricerca che include una sezione specifica sulla lettera. Descrive il supporto come una tovaglietta da ristorante scritta in inchiostro rosso e discute le analisi di James Green e Mozelle Martin. Gli autori segnalano inoltre che la catena di custodia della fotocopia sottoposta ad analisi grafologica è incerta.</note></bibl><bibl xml:id="bibl-green-2025" type="forensic-report"><author>James A. Green</author><title>Examination of the Kurt Cobain suicide note</title><date when="2025-06-15">15 giugno 2025</date><ptr target="https://meixatech.com/CobainGreenReport.pdf"/><note>Rapporto privato di esame documentale. Confronta il corpo principale della nota con le ultime quattro righe. La letteratura successiva riferisce che Green rilevò differenze significative e notevoli, senza formulare una determinazione conclusiva dell’esistenza di un secondo autore.</note></bibl><bibl xml:id="bibl-martin-2026" type="forensic-commentary"><author>Mozelle Martin</author><title>Did Kurt Cobain Write the Whole Note? My forensic findings, clearly stated</title><date when="2026-03-20">20 marzo 2026</date><ptr target="https://drmozellemartin.substack.com/p/did-kurt-cobain-write-the-whole-note"/><note>Esposizione pubblica delle conclusioni dell’analisi grafologica condotta da Martin. L’autrice dichiara che il corpo principale è fortemente coerente con la grafia nota di Cobain, mentre le ultime quattro righe presentano scostamenti significativi. Precisa che la conclusione è limitata alle caratteristiche grafiche, non costituisce una conclusione giuridica e non implica l’attribuzione a una specifica seconda persona.</note></bibl><bibl xml:id="bibl-ilfatto-2026" type="reception-source"><author>Andrea Bressan</author><title>«La grafia nelle ultime righe è diversa: non crediamo le abbia scritte Kurt Cobain»: scoperte “anomalie significative” nella lettera d’addio della star dei Nirvana</title><date when="2026-03-22">22 marzo 2026</date><ptr target="https://www.ilfattoquotidiano.it/2026/03/22/la-grafia-nelle-ultime-righe-e-diversa-non-crediamo-le-abbia-scritte-kurt-cobain-scoperte-anomalie-significative-nella-lettera-daddio-della-star-dei-nirvana/8332773/"/><note>Fonte giornalistica di ricezione che rende accessibile al pubblico italiano la controversia sulle ultime quattro righe, riportando le valutazioni di Mozelle Martin, James A. Green e Michelle Wilkins. È utilizzata come fonte sulla ricezione contemporanea del dibattito, non come fonte primaria dell’esame grafologico.</note></bibl></listBibl><listPerson type="named-entities-text" xml:id="list-persons-cobain">
+    <bibl xml:id="bibl-la-times-photos" type="documentary-context">
+      <title>Los Angeles Times, Seattle police releases dozens of new Kurt Cobain photos</title>
+      <ptr target="https://www.latimes.com/entertainment/music/posts/la-et-ms-seattle-police-kurt-cobain-photos-20140328-story.html"/>
+      <note>Fonte giornalistica utile per il contesto fotografico: nota descritta in posizione originaria nella serra, su una fioriera e trattenuta da una penna; 
+        immagini da 35mm e Polaroid.</note>
+    </bibl>
+     <bibl xml:id="bibl-spd-case" type="documentary-reference">
+       <author>Seattle Police Department</author>
+       <title>Case Investigation Report 94-156500</title>
+       <date when="2014-03-31">31 marzo 2014</date>
+       <ptr target="https://spdblotter.seattle.gov/2014/03/31/detectives-reviews-cobain-case-which-remains-closed/"/>
+       <note>Fonte istituzionale per il fascicolo investigativo e per la revisione del caso resa pubblica dal Seattle Police Department. 
+         La posizione ufficiale del dipartimento resta quella di un caso chiuso classificato come suicidio.</note>
+     </bibl>
+     <bibl xml:id="bibl-wsp-lab" type="forensic-report">
+       <author>Washington State Patrol Crime Laboratory</author>
+       <title>Crime Laboratory Report, Laboratory No. 194-12204, Agency Case No. 94-156500</title>
+       <date when="1994-04-22">22 aprile 1994</date>
+       <ptr target="https://spdblotter.seattle.gov/wp-content/uploads/sites/11/2014/03/Notebook1.pdf"/>
+       <note>Rapporto ufficiale di esame documentale. Confronta la questioned note che inizia «Speaking from the tongue of...» 
+         con una nota di tre pagine su carta dell’Hotel Excelsior recante grafia nota di Kurt Cobain e conclude che la nota esaminata fu scritta da Cobain. 
+         La conclusione non distingue separatamente le ultime quattro righe.</note>
+     </bibl>
+     <bibl xml:id="bibl-burnett-2025" type="research-article">
+       <author>Bryan R. Burnett; Michael Gregory; Felice Nunziata; Pietro Zuccarello; Cataldo Raffino; Gabriele Rotter; Michelle Wilkins</author>
+       <title>A Multidisciplinary Analysis of the Kurt Cobain Death</title>
+       <title level="j">International Journal of Forensic Sciences</title>
+       <date when="2025-11-06">6 novembre 2025</date>
+       <biblScope unit="volume">10</biblScope>
+       <biblScope unit="issue">4</biblScope>
+       <biblScope unit="page">1–35</biblScope>
+       <idno type="DOI">10.23880/ijfsc-16000450</idno>
+       <ptr target="https://medwinpublishers.com/article/IJFSC/10.23880/ijfsc-16000450/full"/>
+       <note>Articolo di ricerca che include una sezione specifica sulla lettera. 
+         Descrive il supporto come una tovaglietta da ristorante scritta in inchiostro rosso e discute le analisi di James Green e Mozelle Martin. 
+         Gli autori segnalano inoltre che la catena di custodia della fotocopia sottoposta ad analisi grafologica è incerta.</note>
+     </bibl>
+     <bibl xml:id="bibl-green-2025" type="forensic-report">
+       <author>James A. Green</author>
+       <title>Examination of the Kurt Cobain suicide note</title>
+       <date when="2025-06-15">15 giugno 2025</date>
+       <ptr target="https://meixatech.com/CobainGreenReport.pdf"/>
+       <note>Rapporto privato di esame documentale. Confronta il corpo principale della nota con le ultime quattro righe. 
+         La letteratura successiva riferisce che Green rilevò differenze significative e notevoli, senza formulare una determinazione conclusiva dell’esistenza di un secondo autore.</note>
+     </bibl>
+     <bibl xml:id="bibl-martin-2026" type="forensic-commentary">
+       <author>Mozelle Martin</author>
+       <title>Did Kurt Cobain Write the Whole Note? My forensic findings, clearly stated</title>
+       <date when="2026-03-20">20 marzo 2026</date>
+       <ptr target="https://drmozellemartin.substack.com/p/did-kurt-cobain-write-the-whole-note"/>
+       <note>Esposizione pubblica delle conclusioni dell’analisi grafologica condotta da Martin. 
+         L’autrice dichiara che il corpo principale è fortemente coerente con la grafia nota di Cobain, mentre le ultime quattro righe presentano scostamenti significativi. 
+         Precisa che la conclusione è limitata alle caratteristiche grafiche, non costituisce una conclusione giuridica e non implica l’attribuzione a una specifica seconda persona.</note>
+     </bibl>
+     <bibl xml:id="bibl-ilfatto-2026" type="reception-source">
+       <author>Andrea Bressan</author>
+       <title>«La grafia nelle ultime righe è diversa: non crediamo le abbia scritte Kurt Cobain»: scoperte “anomalie significative” nella lettera d’addio della star dei Nirvana</title>
+       <date when="2026-03-22">22 marzo 2026</date>
+       <ptr target="https://www.ilfattoquotidiano.it/2026/03/22/la-grafia-nelle-ultime-righe-e-diversa-non-crediamo-le-abbia-scritte-kurt-cobain-scoperte-anomalie-significative-nella-lettera-daddio-della-star-dei-nirvana/8332773/"/>
+       <note>Fonte giornalistica di ricezione che rende accessibile al pubblico italiano la controversia sulle ultime quattro righe, 
+         riportando le valutazioni di Mozelle Martin, James A. Green e Michelle Wilkins. 
+         È utilizzata come fonte sulla ricezione contemporanea del dibattito, non come fonte primaria dell’esame grafologico.</note>
+     </bibl>
+     <bibl xml:id="bibl-my-my-hey-hey" type="cultural-reference">
+       <author ref="#neil-young">Neil Young</author>
+       <author>Jeff Blackburn</author>
+       <title>My My, Hey Hey (Out of the Blue)</title>
+       <date when="1979">1979</date>
+       <idno type="MusicBrainz">364d8207-fb4e-3d6a-808f-02a34158dd33</idno>
+       <ptr target="https://musicbrainz.org/work/364d8207-fb4e-3d6a-808f-02a34158dd33"/>
+       <note>Riferimento culturale indiretto collegato alla citazione «it's better to burn out than to fade away». 
+         L'opera è identificata mediante il work MusicBrainz della versione acustica «My My, Hey Hey (Out of the Blue)», 
+         attribuita a Neil Young e Jeff Blackburn. Non viene assegnato un QID Wikidata al brano in questa edizione, 
+         per evitare di confonderlo con la controparte elettrica «Hey Hey, My My (Into the Black)».</note>
+     </bibl>
+   </listBibl>
+        <listPerson type="named-entities-text" xml:id="list-persons-cobain">
           <head>Persone e figure nominate o direttamente alluse nel testo</head>
-          <desc>Elenco delle persone e figure biografiche o culturali collegate alla lettera. Le schede sono pensate per la consultazione in EVT 2 e per l’authority control tramite Wikidata quando disponibile.</desc><person xml:id="kurt-cobain" role="author" sameAs="https://www.wikidata.org/wiki/Q8446">
+          <desc>Elenco delle persone e figure biografiche o culturali collegate alla lettera.</desc>
+          <person xml:id="kurt-cobain" role="author" sameAs="https://www.wikidata.org/wiki/Q8446">
             <persName type="display">Kurt Cobain</persName>
             <persName>Kurt Donald Cobain</persName>
             <idno type="Wikidata">Q8446</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q8446</idno>
             <birth when="1967-02-20"><placeName>Aberdeen, Washington</placeName></birth>
             <death when="1994-04-05"><placeName ref="#seattle">Seattle, Washington</placeName></death>
-            <occupation>Musicista, cantante, chitarrista e autore statunitense.</occupation><note>Autore attribuito della lettera; musicista, cantante e chitarrista statunitense, noto soprattutto come membro dei Nirvana.</note>
-          <note type="authority">Identificativo Wikidata: Q8446.</note><note type="evt-info">Autore attribuito della lettera; figura centrale del grunge e del rock alternativo, collegata ai Nirvana e al contesto musicale statunitense degli anni Novanta.</note></person>
+            <occupation>Musicista, cantante, chitarrista e autore statunitense.</occupation>
+            <note>Autore attribuito della lettera; musicista, cantante e chitarrista statunitense, noto soprattutto come membro dei Nirvana.</note>
+          <note type="authority">Identificativo Wikidata: Q8446.</note>
+            <note type="evt-info">Autore attribuito della lettera; figura centrale del grunge e del rock alternativo, 
+              collegata ai Nirvana e al contesto musicale statunitense degli anni Novanta.</note>
+          </person>
           <person xml:id="boddah" cert="medium" role="imaginary">
             <persName>Boddah</persName>
-            <note>Destinatario indicato nell’incipit della lettera. Nella tradizione biografica su Kurt Cobain è generalmente interpretato come amico immaginario d’infanzia. Non è stato individuato un identificativo Wikidata autonomo.</note>
+            <note>Destinatario indicato nell’incipit della lettera. Nella tradizione biografica su Kurt Cobain è generalmente interpretato come amico immaginario d’infanzia. 
+              Non è stato individuato un identificativo Wikidata autonomo.</note>
           <note type="evt-info">Destinatario della lettera. È trattato come figura biografico-narrativa o immaginaria, non come persona storicamente verificata con authority autonoma.</note></person>
           <person xml:id="freddie-mercury" role="cultural-reference" sameAs="https://www.wikidata.org/wiki/Q15869">
             <persName>Freddie Mercury</persName>
             <persName type="birth">Farrokh Bulsara</persName>
             <idno type="Wikidata">Q15869</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q15869</idno>
-            <occupation>Cantante, compositore e performer britannico.</occupation><note>Riferimento culturale esplicito nel testo, evocato come modello di rapporto con il pubblico e con l’adorazione della folla.</note>
-          <note type="authority">Identificativo Wikidata: Q15869.</note><note type="evt-info">Riferimento culturale esplicito nel testo: viene evocato come modello di rapporto con il pubblico, la scena e l’adorazione dei fan.</note></person>
+            <occupation>Cantante, compositore e performer britannico.</occupation>
+            <note>Riferimento culturale esplicito nel testo, evocato come modello di rapporto con il pubblico e con l’adorazione della folla.</note>
+            <note type="authority">Identificativo Wikidata: Q15869.</note>
+            <note type="evt-info">Riferimento culturale esplicito nel testo: viene evocato come modello di rapporto con il pubblico, la scena e l’adorazione dei fan.</note>
+          </person>
           <person xml:id="courtney-love" role="family-context" sameAs="https://www.wikidata.org/wiki/Q222071">
             <persName>Courtney Love</persName>
             <persName type="birth">Courtney Michelle Harrison</persName>
             <idno type="Wikidata">Q222071</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q222071</idno>
-            <occupation>Musicista, cantante e attrice statunitense.</occupation><note>Moglie di Kurt Cobain; nel testo è nominata nel poscritto ed è richiamata indirettamente attraverso l’espressione “wife”.</note>
-          <note type="authority">Identificativo Wikidata: Q222071.</note><note type="evt-info">Musicista e attrice; nel contesto della lettera è la moglie di Kurt Cobain e madre di Frances Bean Cobain.</note></person>
+            <occupation>Musicista, cantante e attrice statunitense.</occupation>
+            <note>Moglie di Kurt Cobain; nel testo è nominata nel poscritto ed è richiamata indirettamente attraverso l’espressione “wife”.</note>
+            <note type="authority">Identificativo Wikidata: Q222071.</note>
+            <note type="evt-info">Musicista e attrice; nel contesto della lettera è la moglie di Kurt Cobain e madre di Frances Bean Cobain.</note>
+          </person>
           <person xml:id="frances-cobain" role="family-context" sameAs="https://www.wikidata.org/wiki/Q426999">
             <persName>Frances Bean Cobain</persName>
             <persName type="textual">Frances</persName>
             <idno type="Wikidata">Q426999</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q426999</idno>
-            <occupation>Artista visuale e modella statunitense.</occupation><note>Figlia di Kurt Cobain e Courtney Love; nel testo è nominata come “Frances”.</note>
-          <note type="authority">Identificativo Wikidata: Q426999.</note><note type="evt-info">Figlia di Kurt Cobain e Courtney Love; nel testo è nominata come destinataria affettiva del poscritto.</note></person>
+            <occupation>Artista visuale e modella statunitense.</occupation>
+            <note>Figlia di Kurt Cobain e Courtney Love; nel testo è nominata come “Frances”.</note>
+            <note type="authority">Identificativo Wikidata: Q426999.</note>
+            <note type="evt-info">Figlia di Kurt Cobain e Courtney Love; nel testo è nominata come destinataria affettiva del poscritto.</note>
+          </person>
           <person xml:id="neil-young" role="indirect-cultural-reference" sameAs="https://www.wikidata.org/wiki/Q633">
             <persName>Neil Young</persName>
             <persName type="full">Neil Percival Young</persName>
             <idno type="Wikidata">Q633</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q633</idno>
-            <occupation>Cantautore e musicista canadese-statunitense.</occupation><note>Riferimento culturale indiretto collegato alla citazione “it's better to burn out than to fade away”.</note>
-          <note type="authority">Identificativo Wikidata: Q633.</note><note type="evt-info">Musicista richiamato indirettamente attraverso la citazione “it’s better to burn out than to fade away”.</note></person>
+            <occupation>Cantautore e musicista canadese-statunitense.</occupation>
+            <note>Riferimento culturale indiretto collegato alla citazione “it's better to burn out than to fade away”.</note>
+            <note type="authority">Identificativo Wikidata: Q633.</note>
+            <note type="evt-info">Musicista richiamato indirettamente attraverso la citazione “it’s better to burn out than to fade away”.</note>
+          </person>
           <person xml:id="jesus-christ" role="religious-cultural-reference" sameAs="https://www.wikidata.org/wiki/Q302">
             <persName>Jesus Christ</persName>
             <persName type="textual">Jesus</persName>
             <idno type="Wikidata">Q302</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q302</idno>
             <note>Riferimento religioso-culturale nel sintagma “Jesus man”.</note>
-          <note type="authority">Identificativo Wikidata: Q302.</note><note type="evt-info">Figura religiosa e culturale evocata nel sintagma “Jesus man”; il riferimento va interpretato come allusione culturale interna al linguaggio del testo.</note></person>
+            <note type="authority">Identificativo Wikidata: Q302.</note>
+            <note type="evt-info">Figura religiosa e culturale evocata nel sintagma “Jesus man”; il riferimento va interpretato come allusione culturale interna al linguaggio del testo.</note></person>
         <listRelation type="entity-relations">
-          <head>Relazioni fra entità normalizzate</head>
+          <head>Relazioni</head>
           <relation name="memberOf" active="#kurt-cobain" passive="#nirvana"/>
           <relation name="memberOf" active="#freddie-mercury" passive="#queen"/>
           <relation name="spouseOf" mutual="#kurt-cobain #courtney-love"/>
@@ -96,51 +233,66 @@
         </listRelation>
       </listPerson>
         <listOrg type="organizations-and-cultural-context" xml:id="list-orgs-cobain">
-          <head>Organizzazioni, gruppi musicali e istituzioni documentarie</head>
-          <desc>Elenco delle organizzazioni, dei gruppi musicali e delle istituzioni utili a ricostruire la rete culturale e documentaria del testo.</desc><org xml:id="nirvana" type="band" role="implicit-context" sameAs="https://www.wikidata.org/wiki/Q11649">
+          <head>Organizzazioni, gruppi musicali e istituzioni</head>
+          <desc>Elenco delle organizzazioni, dei gruppi musicali e delle istituzioni </desc>
+          <org xml:id="nirvana" type="band" role="implicit-context" sameAs="https://www.wikidata.org/wiki/Q11649">
             <orgName>Nirvana</orgName>
             <idno type="Wikidata">Q11649</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q11649</idno>
             <note>Gruppo musicale di cui Kurt Cobain fu membro; entità contestuale implicita nei riferimenti a “we”, “our music” e “our last 3 tours”.</note>
-          <note type="authority">Identificativo Wikidata: Q11649.</note><note type="evt-info">Gruppo musicale di cui Kurt Cobain fu membro; nel testo è implicito nei riferimenti alla musica, ai tour e alla dimensione performativa.</note></org>
+            <note type="authority">Identificativo Wikidata: Q11649.</note>
+            <note type="evt-info">Gruppo musicale di cui Kurt Cobain fu membro; nel testo è implicito nei riferimenti alla musica, ai tour e alla dimensione performativa.</note>
+          </org>
           <org xml:id="queen" type="band" role="indirect-cultural-reference" sameAs="https://www.wikidata.org/wiki/Q15862">
             <orgName>Queen</orgName>
             <idno type="Wikidata">Q15862</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q15862</idno>
             <note>Gruppo musicale richiamato indirettamente attraverso la menzione di Freddie Mercury.</note>
-          <note type="authority">Identificativo Wikidata: Q15862.</note><note type="evt-info">Gruppo musicale richiamato indirettamente attraverso la menzione di Freddie Mercury.</note></org>
+            <note type="authority">Identificativo Wikidata: Q15862.</note>
+            <note type="evt-info">Gruppo musicale richiamato indirettamente attraverso la menzione di Freddie Mercury.</note>
+          </org>
           <org xml:id="seattle-police-department" type="institution" role="documentary-source" cert="medium">
             <orgName>Seattle Police Department</orgName>
             <note>Istituzione documentaria collegata al fascicolo investigativo SPD 94-156500. Non è stato usato un identificativo Wikidata autonomo perché non verificato in modo stabile in questa fase.</note>
-          <note type="evt-info">Istituzione collegata al fascicolo investigativo SPD 94-156500, usato come riferimento documentario dell’edizione.</note></org>
+            <note type="evt-info">Istituzione collegata al fascicolo investigativo SPD 94-156500, usato come riferimento documentario dell’edizione.</note>
+          </org>
           <org xml:id="washington-state-patrol" type="institution" role="documentary-source" sameAs="https://www.wikidata.org/wiki/Q3566523">
             <orgName>Washington State Patrol</orgName>
             <idno type="Wikidata">Q3566523</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q3566523</idno>
             <note>Istituzione collegata al riferimento documentario del Crime Laboratory Report 194-12204.</note>
-          <note type="authority">Identificativo Wikidata: Q3566523.</note><note type="evt-info">Istituzione collegata al riferimento documentario del Crime Laboratory Report 194-12204.</note></org>
+            <note type="authority">Identificativo Wikidata: Q3566523.</note>
+            <note type="evt-info">Istituzione collegata al riferimento documentario del Crime Laboratory Report 194-12204.</note>
+          </org>
         </listOrg>
         <listPlace xml:id="list-places-cobain" ana="#places-and-documentary-context">
           <head>Luoghi espliciti o contestuali</head>
-          <desc>Elenco dei luoghi necessari alla contestualizzazione testuale, biografica e documentaria del testimone.</desc><place xml:id="seattle" sameAs="https://www.wikidata.org/wiki/Q5083">
+          <desc>Elenco dei luoghi legati al testimone</desc>
+          <place xml:id="seattle" sameAs="https://www.wikidata.org/wiki/Q5083">
             <placeName>Seattle</placeName>
             <location><geo>47.6062 -122.3321</geo></location>
             <idno type="Wikidata">Q5083</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q5083</idno>
             <note>Luogo contestuale della vicenda documentaria e del fascicolo investigativo.</note>
-          <note type="authority">Identificativo Wikidata: Q5083.</note><note type="evt-info">Luogo contestuale della vicenda documentaria e della provenienza del fascicolo investigativo.</note></place>
+            <note type="authority">Identificativo Wikidata: Q5083.</note>
+            <note type="evt-info">Luogo contestuale della vicenda documentaria e della provenienza del fascicolo investigativo.</note>
+          </place>
           <place xml:id="washington-state" sameAs="https://www.wikidata.org/wiki/Q1223">
             <placeName>Washington</placeName>
             <idno type="Wikidata">Q1223</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q1223</idno>
             <note>Stato federato degli Stati Uniti collegato al contesto documentario e istituzionale del testimone.</note>
-          <note type="authority">Identificativo Wikidata: Q1223.</note><note type="evt-info">Stato federato collegato al contesto documentario e istituzionale del testimone.</note></place>
+            <note type="authority">Identificativo Wikidata: Q1223.</note>
+            <note type="evt-info">Stato federato collegato al contesto documentario e istituzionale del testimone.</note>
+          </place>
           <place xml:id="united-states" sameAs="https://www.wikidata.org/wiki/Q30">
             <placeName>United States</placeName>
             <idno type="Wikidata">Q30</idno>
             <idno type="Wikidata-URI">https://www.wikidata.org/wiki/Q30</idno>
             <note>Contesto nazionale delle istituzioni e delle entità biografiche principali.</note>
-          <note type="authority">Identificativo Wikidata: Q30.</note><note type="evt-info">Contesto nazionale delle principali entità biografiche, musicali e istituzionali richiamate nell’edizione.</note></place>
+            <note type="authority">Identificativo Wikidata: Q30.</note>
+            <note type="evt-info">Contesto nazionale delle principali entità biografiche, musicali e istituzionali richiamate nell’edizione.</note>
+          </place>
         </listPlace>
       </sourceDesc>
     </fileDesc>
@@ -150,11 +302,44 @@
       </projectDesc>
       <editorialDecl>
         <p>La trascrizione è predisposta come livello diplomatico</p>
-        <p>La traduzione italiana è codificata mediante l'uso funzionale di choice, orig e reg, adattato al selettore diplomatico/interpretativo di EVT 2. Il valore type="translation" in reg segnala il livello traduttivo e non una normalizzazione linguistica.</p>
-        <p>Le named entities e i riferimenti culturali sono codificati in modo stratificato: persone, organizzazioni e luoghi sono normalizzati con authority Wikimedia/Wikidata quando disponibili; concetti musicali, riferimenti performativi, emozioni e allusioni culturali sono registrati come termini controllati. Le entità indirette sono segnalate come tali e non vanno confuse con occorrenze letterali del testo.</p>
-      <p>La trascrizione diplomatica registra gli interventi autografi visibili nel facsimile digitale: le aggiunte sopralineari sono codificate con add, le cancellature con del rend="overstrike", le eventuali sostituzioni con subst quando il rapporto tra soppressione e aggiunta è determinabile. Quando il tratto cancellato è visibile ma non leggibile sulla riproduzione disponibile, la soppressione è registrata con del contenente gap reason="illegible"; questa scelta non scioglie congetturalmente ciò che la fonte digitale non permette di leggere.</p><p>Per le cancellature visibili ma non leggibili con sicurezza dal facsimile digitale, la codifica conserva il dato diplomatico mediante gap e aggiunge un segnaposto editoriale in supplied, usato esclusivamente per rendere visibile il fenomeno in EVT 2. Il segnaposto non costituisce una ricostruzione del testo cancellato.</p><p>L’attribuzione grafica è trattata separatamente dalla trascrizione: la presente edizione conserva la conclusione del rapporto ufficiale del 1994 e registra, come controversia documentata, le analisi private recenti sulle ultime quattro righe. La marcatura critica non equivale a identificare una seconda mano né a formulare conclusioni sulla dinamica della morte.</p><p>Nell’interfaccia EVT 2, MS Desc è riservato alla descrizione scientifica essenziale del testimone: identificazione, contenuto, descrizione materiale, attribuzione grafica, origine e provenienza. Le informazioni editoriali, metodologiche, di disponibilità e sulla riproduzione digitale sono invece presentate nel front, accessibile tramite il pulsante Info del riquadro testuale. Questa separazione evita duplicazioni e garantisce una resa leggibile senza alterare la struttura scientifica del TEI.</p><p>Per evitare che il pannello MS Desc di EVT 2, che ha altezza fissa e scorrimento interno, interrompa visivamente paragrafi a metà del viewport, msDesc è mantenuto intenzionalmente compatto e limitato ai dati essenziali del testimone. L’esposizione estesa dei dati materiali, dei criteri editoriali e del contesto documentario è affidata a front/Info.</p><p>Le righe 39–42, marcate con ana="#handwriting-attribution-disputed", ricevono anche rend="handwriting-disputed" per la visualizzazione EVT 2. Il rosso scuro ha valore segnaletico e non costituisce attribuzione certa a una seconda mano.</p></editorialDecl>
+        <p>La traduzione italiana è codificata mediante l'uso funzionale di tag come choice, orig e reg, adattato al selettore diplomatico/interpretativo di EVT 2. 
+          Il valore type="translation" in reg segnala il livello traduttivo e non una normalizzazione linguistica.</p>
+        <p>Le named entities e i riferimenti culturali sono codificati in modo stratificato: 
+          persone, organizzazioni e luoghi sono normalizzati con authority Wikimedia/Wikidata quando disponibili; 
+          concetti musicali, riferimenti performativi, emozioni e allusioni culturali sono registrati come termini controllati. 
+          Le entità indirette sono segnalate come tali e non vanno confuse con occorrenze letterali del testo.</p>
+      <p>La trascrizione diplomatica registra gli interventi autografi visibili nel facsimile digitale: 
+        le aggiunte sopralineari sono codificate con add, le cancellature con del rend="overstrike", 
+        le eventuali sostituzioni con subst quando il rapporto tra soppressione e aggiunta è determinabile. 
+        Quando il tratto cancellato è visibile ma non leggibile sulla riproduzione disponibile, la soppressione è registrata con del contenente gap reason="illegible"; 
+        questa scelta non scioglie congetturalmente ciò che la fonte digitale non permette di leggere.</p>
+        <p>Per le cancellature visibili ma non leggibili con sicurezza dal facsimile digitale, 
+          la codifica conserva il dato diplomatico mediante gap e aggiunge un segnaposto editoriale in supplied, 
+          usato esclusivamente per rendere visibile il fenomeno in EVT 2. Il segnaposto non costituisce una ricostruzione del testo cancellato.</p>
+        <p>L’attribuzione grafica è trattata separatamente dalla trascrizione: la presente edizione conserva la conclusione del rapporto ufficiale del 1994 e registra, 
+          come controversia documentata, le analisi private recenti sulle ultime quattro righe. 
+          La marcatura critica non equivale a identificare una seconda mano né a formulare conclusioni sulla dinamica della morte.</p>
+        <p>Nell’interfaccia EVT 2, MS Desc è riservato alla descrizione scientifica essenziale del testimone: identificazione, contenuto, descrizione materiale, 
+          attribuzione grafica, origine e provenienza. Le informazioni editoriali, metodologiche, di disponibilità e sulla riproduzione digitale sono invece presentate nel front, 
+          accessibile tramite il pulsante Info del riquadro testuale. Questa separazione evita duplicazioni e garantisce una resa leggibile senza alterare la struttura scientifica del TEI.</p>
+        <p>Per evitare che il pannello MS Desc di EVT 2, che ha altezza fissa e scorrimento interno, interrompa visivamente paragrafi a metà del viewport, 
+          msDesc è mantenuto intenzionalmente compatto e limitato ai dati essenziali del testimone. L’esposizione estesa dei dati materiali, 
+          dei criteri editoriali e del contesto documentario è affidata a front/Info.</p><p>Le righe 39–42, marcate con ana="#handwriting-attribution-disputed", 
+            ricevono anche rend="handwriting-disputed" per la visualizzazione EVT 2. Il rosso scuro ha valore segnaletico e non costituisce attribuzione certa a una seconda mano.</p>
+        <p>Le occorrenze esplicite dei concetti già registrati nella tassonomia culturale sono marcate in modo coerente nel testo diplomatico e nella traduzione; 
+          la marcatura riguarda le occorrenze testuali effettive e non forza nel corpo concetti meramente contestuali.</p>
+        <p>Il simbolo ⟦…⟧ segnala nella resa EVT 2 una cancellatura visibile il cui contenuto non è leggibile con sicurezza; 
+          l’eventuale quantità stimata di parole resta codificata in gap/@quantity e non viene espansa nel testo visualizzato.</p>
+        <p>I riferimenti indiretti a persone e organizzazioni sono codificati con rs/@ref quando il referente è sufficientemente determinabile dal contesto; 
+          questa marcatura integra, senza sostituirla, l’annotazione delle occorrenze nominali esplicite.</p>
+        <p>Gli identificativi di authority esterna sono mantenuti soltanto quando il concetto o l’entità corrispondono semanticamente al referente codificato; 
+          in caso di equivalenza incerta l’edizione preferisce non assegnare un identificativo esterno.</p>
+        <p>Il collegamento testo–immagine è calibrato sulla riproduzione locale di 720 × 960 pixel; 
+          le 42 zone corrispondono alle righe fisiche del facsimile e sono collegate reciprocamente ai relativi lb.</p>
+      </editorialDecl>
       <refsDecl>
-        <p>Il facsimile è richiamato tramite un'immagine locale per garantire la stabilità della visualizzazione.</p></refsDecl>
+        <p>Il facsimile è richiamato tramite un'immagine locale per garantire la stabilità della visualizzazione.</p>
+      </refsDecl>
       <classDecl>
         <taxonomy xml:id="edition-levels">
           <category xml:id="diplomatic">
@@ -165,32 +350,187 @@
           </category>
         </taxonomy>
         <taxonomy xml:id="taxonomy-documentary-keywords">
-          <category xml:id="concept-letter"><catDesc><term>lettera</term>: messaggio scritto da una persona a un’altra; Wikidata <ref target="https://www.wikidata.org/wiki/Q133492">Q133492</ref>.</catDesc></category>
-        <category xml:id="places-and-documentary-context"><catDesc>Categoria per luoghi e contesti documentari collegati all’identificazione del testimone.</catDesc></category></taxonomy>
+          <category xml:id="concept-letter">
+            <catDesc>
+              <term>lettera</term>: messaggio scritto da una persona a un’altra; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q133492">Q133492</ref>.
+            </catDesc>
+          </category>
+        <category xml:id="places-and-documentary-context">
+          <catDesc>Categoria per luoghi e contesti documentari collegati all’identificazione del testimone.</catDesc>
+        </category>
+        </taxonomy>
         <taxonomy xml:id="taxonomy-cultural-concepts">
-          <category xml:id="concept-punk-rock"><catDesc><term>punk rock</term>: genere musicale del rock; Wikidata <ref target="https://www.wikidata.org/wiki/Q3071">Q3071</ref>.</catDesc></category>
-          <category xml:id="concept-rock-music"><catDesc><term>rock music</term>: genere di musica popolare; Wikidata <ref target="https://www.wikidata.org/wiki/Q11399">Q11399</ref>.</catDesc></category>
-          <category xml:id="concept-alternative-rock"><catDesc><term>alternative rock</term>: sottogenere della musica rock; Wikidata <ref target="https://www.wikidata.org/wiki/Q11366">Q11366</ref>.</catDesc></category>
-          <category xml:id="concept-grunge"><catDesc><term>grunge</term>: genere rock noto anche come “Seattle sound”; Wikidata <ref target="https://www.wikidata.org/wiki/Q11365">Q11365</ref>.</catDesc></category>
-          <category xml:id="concept-deathrock"><catDesc><term>deathrock</term>: sottogenere della musica rock; Wikidata <ref target="https://www.wikidata.org/wiki/Q1164252">Q1164252</ref>.</catDesc></category>
-          <category xml:id="concept-music"><catDesc><term>music</term>: Wikidata <ref target="https://www.wikidata.org/wiki/Q638">Q638</ref>.</catDesc></category>
-          <category xml:id="concept-performing-arts"><catDesc><term>performing arts</term>: arti performative; Wikidata <ref target="https://www.wikidata.org/wiki/Q184485">Q184485</ref>.</catDesc></category>
-          <category xml:id="concept-stage"><catDesc><term>stage</term>: spazio della performance; Wikidata <ref target="https://www.wikidata.org/wiki/Q194428">Q194428</ref>.</catDesc></category>
-          <category xml:id="concept-audience"><catDesc><term>audience</term>: pubblico di una performance musicale; Wikidata <ref target="https://www.wikidata.org/wiki/Q211198">Q211198</ref>.</catDesc></category>
-          <category xml:id="concept-concert-tour"><catDesc><term>concert tour</term>: serie di concerti in luoghi diversi; Wikidata <ref target="https://www.wikidata.org/wiki/Q1573906">Q1573906</ref>.</catDesc></category>
-          <category xml:id="concept-fan"><catDesc><term>fan</term>: persona devota a un artista o oggetto culturale; Wikidata <ref target="https://www.wikidata.org/wiki/Q193432">Q193432</ref>.</catDesc></category>
-          <category xml:id="concept-fandom"><catDesc><term>fandom</term>: sottocultura di fan; Wikidata <ref target="https://www.wikidata.org/wiki/Q773944">Q773944</ref>.</catDesc></category>
-          <category xml:id="concept-ethics"><catDesc><term>ethics</term>: ramo della filosofia relativo alla condotta giusta o sbagliata; Wikidata <ref target="https://www.wikidata.org/wiki/Q9465">Q9465</ref>.</catDesc></category>
-          <category xml:id="concept-independence"><catDesc><term>independence</term>: categoria semantica contestuale; Wikidata <ref target="https://www.wikidata.org/wiki/Q37055">Q37055</ref>, da usare con cautela perché l’item ha primariamente valore politico-istituzionale.</catDesc></category>
-          <category xml:id="concept-community"><catDesc><term>community</term>: unità sociale di persone che condividono valori; Wikidata <ref target="https://www.wikidata.org/wiki/Q177634">Q177634</ref>.</catDesc></category>
-          <category xml:id="concept-love"><catDesc><term>love</term>: emozione positiva fondata sull’affetto; Wikidata <ref target="https://www.wikidata.org/wiki/Q316">Q316</ref>.</catDesc></category>
-          <category xml:id="concept-happiness"><catDesc><term>joy / happiness</term>: felicità o gioia; Wikidata <ref target="https://www.wikidata.org/wiki/Q8">Q8</ref>.</catDesc></category>
-          <category xml:id="concept-empathy"><catDesc><term>empathy</term>: capacità di comprendere o sentire l’esperienza di un’altra persona; Wikidata <ref target="https://www.wikidata.org/wiki/Q182263">Q182263</ref>.</catDesc></category>
-          <category xml:id="concept-pisces"><catDesc><term>Pisces</term>: dodicesimo segno astrologico dello zodiaco; Wikidata <ref target="https://www.wikidata.org/wiki/Q1254190">Q1254190</ref>.</catDesc></category>
-          <category xml:id="concept-reading"><catDesc><term>reading</term>: attività di lettura; Wikidata <ref target="https://www.wikidata.org/wiki/Q10870555">Q10870555</ref>.</catDesc></category>
-          <category xml:id="concept-writing"><catDesc><term>writing</term>: attività di scrittura; Wikidata <ref target="https://www.wikidata.org/wiki/Q37260">Q37260</ref>.</catDesc></category>
-        <category xml:id="concept-peace"><catDesc><term>peace</term>: condizione di assenza di conflitto o tensione; categoria semantica rilevante nella chiusa della lettera.</catDesc></category></taxonomy>
-      <taxonomy xml:id="taxonomy-facsimile-zones"><category xml:id="physical-line-zone"><catDesc>Zona del facsimile corrispondente a una riga fisica del manoscritto.</catDesc></category><category xml:id="physical-line-map"><catDesc>Paragrafo usato per la mappatura diplomatica delle righe fisiche del facsimile.</catDesc></category></taxonomy><taxonomy xml:id="taxonomy-authorial-interventions"><category xml:id="authorial-addition"><catDesc>Aggiunta autografa visibile nel facsimile.</catDesc></category><category xml:id="authorial-deletion"><catDesc>Cancellatura autografa visibile nel facsimile.</catDesc></category><category xml:id="unread-deleted-text"><catDesc>Testo cancellato non recuperabile con sicurezza dalla riproduzione digitale disponibile.</catDesc></category><category xml:id="authorial-substitution"><catDesc>Sostituzione autografa costituita da cancellatura e aggiunta correlate.</catDesc></category><category xml:id="evt-visible-placeholder"><catDesc>Segnaposto editoriale destinato esclusivamente alla resa nel viewer di una cancellatura il cui contenuto non è leggibile con sicurezza; non costituisce ricostruzione del testo soppresso.</catDesc></category></taxonomy><taxonomy xml:id="taxonomy-authorship-assessment"><category xml:id="handwriting-attribution-official"><catDesc>Attribuzione documentaria ufficiale: il Washington State Patrol Crime Laboratory Report 194-12204 attribuisce la questioned note a Kurt Cobain.</catDesc></category><category xml:id="handwriting-attribution-disputed"><catDesc>Area di attribuzione grafica controversa: le ultime quattro righe fisiche del testimone sono state oggetto di analisi recenti che rilevano differenze rispetto al corpo principale. L’edizione non identifica una seconda mano come fatto accertato. Nel livello diplomatico di EVT 2 queste righe sono rese in rosso scuro come convenzione editoriale.</catDesc></category></taxonomy></classDecl>
+          <category xml:id="concept-punk-rock">
+            <catDesc>
+              <term>punk rock</term>: genere musicale del rock; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q3071">Q3071</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-rock-music">
+            <catDesc>
+              <term>rock music</term>: genere di musica popolare; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q11399">Q11399</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-alternative-rock">
+            <catDesc>
+              <term>alternative rock</term>: sottogenere della musica rock; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q11366">Q11366</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-grunge">
+            <catDesc>
+              <term>grunge</term>: genere rock noto anche come “Seattle sound”; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q11365">Q11365</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-deathrock">
+            <catDesc>
+              <term>deathrock</term>: sottogenere della musica rock; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q1164252">Q1164252</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-music">
+            <catDesc>
+              <term>music</term>: Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q638">Q638</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-performing-arts">
+            <catDesc>
+              <term>performing arts</term>: arti performative; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q184485">Q184485</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-stage">
+            <catDesc>
+              <term>stage</term>: spazio della performance; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q194428">Q194428</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-audience">
+            <catDesc>
+              <term>audience</term>: pubblico di una performance musicale; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q211198">Q211198</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-concert-tour">
+            <catDesc>
+              <term>concert tour</term>: serie di concerti in luoghi diversi; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q1573906">Q1573906</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-fan">
+            <catDesc>
+              <term>fan</term>: persona devota a un artista o oggetto culturale; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q193432">Q193432</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-fandom">
+            <catDesc>
+              <term>fandom</term>: sottocultura di fan; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q773944">Q773944</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-ethics">
+            <catDesc>
+              <term>ethics</term>: ramo della filosofia relativo alla condotta giusta o sbagliata; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q9465">Q9465</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-independence">
+            <catDesc>
+              <term>independence</term>: concetto lessicale contestuale relativo all’indipendenza/autonomia personale e culturale; 
+              non viene associato a un identificativo Wikidata perché Q37055 designa specificamente l’indipendenza politica di uno Stato e 
+              non è semanticamente equivalente in questo contesto.</catDesc>
+          </category>
+          <category xml:id="concept-community">
+            <catDesc>
+              <term>community</term>: unità sociale di persone che condividono valori; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q177634">Q177634</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-love">
+            <catDesc>
+              <term>love</term>: emozione positiva fondata sull’affetto; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q316">Q316</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-happiness">
+            <catDesc>
+              <term>joy / happiness</term>: felicità o gioia; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q8">Q8</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-empathy">
+            <catDesc>
+              <term>empathy</term>: capacità di comprendere o sentire l’esperienza di un’altra persona; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q182263">Q182263</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-pisces">
+            <catDesc>
+              <term>Pisces</term>: dodicesimo segno astrologico dello zodiaco; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q1254190">Q1254190</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-reading">
+            <catDesc>
+              <term>reading</term>: processo cognitivo di decodifica di simboli per ricavarne significato; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q199657">Q199657</ref>.
+            </catDesc>
+          </category>
+          <category xml:id="concept-writing">
+            <catDesc>
+              <term>writing</term>: attività di composizione ed espressione di idee o informazioni mediante lingua scritta; Wikidata 
+              <ref target="https://www.wikidata.org/wiki/Q110484020">Q110484020</ref>.
+            </catDesc>
+          </category>
+        <category xml:id="concept-peace">
+          <catDesc>
+            <term>peace</term>: stato di armonia caratterizzato dall’assenza di conflitto violento; Wikidata 
+            <ref target="https://www.wikidata.org/wiki/Q454">Q454</ref>.
+          </catDesc>
+        </category>
+        </taxonomy>
+      <taxonomy xml:id="taxonomy-facsimile-zones">
+        <category xml:id="physical-line-zone">
+          <catDesc>Zona del facsimile corrispondente a una riga fisica del manoscritto.</catDesc>
+        </category>
+        <category xml:id="physical-line-map">
+          <catDesc>Paragrafo usato per la mappatura diplomatica delle righe fisiche del facsimile.</catDesc>
+        </category>
+      </taxonomy>
+        <taxonomy xml:id="taxonomy-authorial-interventions">
+          <category xml:id="authorial-addition">
+            <catDesc>Aggiunta autografa visibile nel facsimile.</catDesc>
+          </category>
+          <category xml:id="authorial-deletion">
+            <catDesc>Cancellatura autografa visibile nel facsimile.</catDesc>
+          </category>
+          <category xml:id="unread-deleted-text">
+            <catDesc>Testo cancellato non recuperabile con sicurezza dalla riproduzione digitale disponibile.</catDesc>
+          </category>
+          <category xml:id="authorial-substitution">
+            <catDesc>Sostituzione autografa costituita da cancellatura e aggiunta correlate.</catDesc>
+          </category>
+          <category xml:id="evt-visible-placeholder">
+            <catDesc>Segnaposto editoriale ⟦…⟧ destinato esclusivamente alla resa nel viewer di una cancellatura visibile il cui contenuto non è leggibile con sicurezza; 
+              non costituisce ricostruzione del testo soppresso. L'eventuale quantità stimata resta codificata in gap/@quantity.</catDesc>
+          </category>
+        </taxonomy>
+        <taxonomy xml:id="taxonomy-authorship-assessment">
+          <category xml:id="handwriting-attribution-official">
+            <catDesc>Attribuzione documentaria ufficiale: il Washington State Patrol Crime Laboratory Report 194-12204 attribuisce la questioned note a Kurt Cobain.</catDesc>
+          </category>
+          <category xml:id="handwriting-attribution-disputed">
+            <catDesc>Area di attribuzione grafica controversa: le ultime quattro righe fisiche del testimone sono state oggetto di analisi recenti 
+              che rilevano differenze rispetto al corpo principale. L’edizione non identifica una seconda mano come fatto accertato. 
+              Nel livello diplomatico di EVT 2 queste righe sono rese in rosso scuro come convenzione editoriale.</catDesc>
+          </category>
+        </taxonomy>
+      </classDecl>
     </encodingDesc>
     <profileDesc>
       <langUsage>
@@ -204,6 +544,8 @@
           <term>edizione digitale</term>
           <term>TEI P5</term>
           <term>EVT 2</term>
+        </keywords>
+        <keywords scheme="#taxonomy-cultural-concepts">
           <term ref="#concept-punk-rock">punk rock</term>
           <term ref="#concept-grunge">grunge</term>
           <term ref="#concept-performing-arts">performance musicale</term>
@@ -225,19 +567,134 @@
         </listPerson>
         </particDesc>
       </profileDesc>
-    <revisionDesc>
-      <change when="2026-09-27" who="#antonio">Aggiunta della resa visiva delle righe 39–42 come area di attribuzione grafica controversa: rend="handwriting-disputed" su lb e orig; predisposizione di stile EVT 2 in rosso scuro per il solo livello diplomatico.</change><change when="2026-09-24" who="#antonio">Riduzione di msDesc a scheda scientifica compatta per la resa nativa in EVT 2, evitando l’interruzione visiva dei paragrafi nel pannello a scorrimento interno. I dati estesi rimossi dal pannello sono conservati nel front/Info.</change><change when="2026-09-24" who="#antonio">Rifinitura della resa di MS Desc in EVT 2: rimozione di additional dal msDesc per evitare l’accodamento visivo di recordHist, availability e surrogates sotto la sezione Storia; trasferimento di tali informazioni nel front/Info; normalizzazione della visualizzazione di origine mediante un paragrafo con luogo e data separati da punteggiatura.</change><change when="2026-09-24" who="#antonio">Riorganizzazione dell’architettura informativa per EVT 2: msDesc è stato ricondotto a una scheda scientifica compatta del testimone, mentre l’esposizione editoriale estesa è stata trasferita in text/front, visualizzabile tramite il pulsante Info del riquadro testuale. Nessuna informazione scientificamente rilevante è stata eliminata.</change><change when="2026-09-24" who="#antonio">Riorganizzazione dei registri di autorità per la compatibilità con EVT 2: listPerson, listOrg e listPlace relativi alle named entities sono stati collocati direttamente in sourceDesc, posizione ammessa da TEI P5 e intercettata dal parser di EVT 2. listRelation è stata ricollocata nel registro delle persone per rendere disponibili nel pannello delle entità anche le relazioni fra persone, organizzazioni e contesto documentario. Il registro delle responsabilità editoriali resta in profileDesc/particDesc.</change><change when="2026-09-23" who="#antonio">Integrazione del dibattito sull’attribuzione grafica delle ultime quattro righe: confronto tra il rapporto ufficiale WSP del 1994 e le analisi di Green, Martin e Burnett et al.; inserimento della fonte giornalistica Il Fatto Quotidiano come testimonianza della ricezione contemporanea; marcatura di lb039–lb042 come area di attribuzione controversa mediante @ana e annotazione stand-off, senza assegnazione editoriale a una seconda mano.</change><change when="2026-07-05" who="#antonio">Revisione diplomatica: registrazione delle cancellature e delle aggiunte visibili nel facsimile; correzione dell’aggiunta sopralineare dopo Boddah in “pronounced”; introduzione di del/add/gap secondo il modello TEI per interventi autografi.</change><change when="2026-07-05" who="#antonio">Ulteriore correzione Relax NG: rimozione di @type da p, con conservazione della funzione tramite @ana.</change><change when="2026-07-05" who="#antonio">Correzione Relax NG per TEI P5: riordinamento di additional, spostamento di listRelation in standOff, rimozione di attributi non ammessi su zone/listPlace/person e riordino di location in place.</change><change when="2026-07-05" who="#antonio">Attivazione del collegamento puntuale testo-immagine: inserimento di zone per le righe fisiche del facsimile, corresp reciproco fra zone e lb, e ristrutturazione della trascrizione in mappatura diplomatica delle righe fisiche. Aggiornamento della descrizione materiale come area di ricerca ancora da completare.</change><change when="2026-07-05" who="#antonio">Ampliamento di msDesc come dossier descrittivo consultabile in EVT 2: integrazione di contenuto, descrizione materiale, storia, surrogate digitali, disponibilità, note metodologiche e riferimenti documentari essenziali.</change><change when="2026-07-03" who="#antonio">Ristrutturazione delle named entities in forma più compatibile con EVT 2: aggiunta di xml:id, key e sameAs, descrizioni di lista, note informative e annotazione più sistematica delle occorrenze nel testo.</change><change when="2026-07-03" who="#antonio">Arricchimento delle named entities e dei riferimenti culturali con persone, organizzazioni, luoghi, concetti musicali, categorie performative e allusioni indirette normalizzate tramite authority Wikimedia/Wikidata quando disponibili.</change>
-      <change when="2026-06-28" who="#antonio">Correzione della struttura TEI per la validazione: rimozione del paragrafo annidato in opener, inserimento di pb e integrazione della descrizione editoriale.</change>
-      <change when="2026-06-28" who="#simone-tornatore">Produzione della bozza iniziale di trascrizione, traduzione e codifica.</change>
-    <change when="2026-07-08" who="#antonio">Inseriti segnaposto editoriali visibili per cancellature illeggibili, mantenendo gap e marcatura diplomatica, e predisposti fogli di stile EVT per la resa grafica di del, add, unclear, supplied e gap.</change></revisionDesc>
   </teiHeader>
   <facsimile xml:id="facsimile-cobain">
     <surface xml:id="surface-1" n="1" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg">
-      <graphic url="data/images/single/Lettera_di_Kurt_Cobain.jpg" mimeType="image/jpeg" width="613px" height="853px"/>
-    <zone xml:id="z001" ulx="20" uly="12" lrx="595" lry="48" corresp="#lb001" cert="medium" ana="#physical-line-zone"/><zone xml:id="z002" ulx="20" uly="66" lrx="595" lry="84" corresp="#lb002" cert="medium" ana="#physical-line-zone"/><zone xml:id="z003" ulx="20" uly="84" lrx="595" lry="101" corresp="#lb003" cert="medium" ana="#physical-line-zone"/><zone xml:id="z004" ulx="20" uly="101" lrx="595" lry="118" corresp="#lb004" cert="medium" ana="#physical-line-zone"/><zone xml:id="z005" ulx="20" uly="118" lrx="595" lry="136" corresp="#lb005" cert="medium" ana="#physical-line-zone"/><zone xml:id="z006" ulx="20" uly="136" lrx="595" lry="154" corresp="#lb006" cert="medium" ana="#physical-line-zone"/><zone xml:id="z007" ulx="20" uly="154" lrx="595" lry="172" corresp="#lb007" cert="medium" ana="#physical-line-zone"/><zone xml:id="z008" ulx="20" uly="172" lrx="595" lry="190" corresp="#lb008" cert="medium" ana="#physical-line-zone"/><zone xml:id="z009" ulx="20" uly="190" lrx="595" lry="208" corresp="#lb009" cert="medium" ana="#physical-line-zone"/><zone xml:id="z010" ulx="20" uly="208" lrx="595" lry="226" corresp="#lb010" cert="medium" ana="#physical-line-zone"/><zone xml:id="z011" ulx="20" uly="226" lrx="595" lry="244" corresp="#lb011" cert="medium" ana="#physical-line-zone"/><zone xml:id="z012" ulx="20" uly="244" lrx="595" lry="262" corresp="#lb012" cert="medium" ana="#physical-line-zone"/><zone xml:id="z013" ulx="20" uly="262" lrx="595" lry="280" corresp="#lb013" cert="medium" ana="#physical-line-zone"/><zone xml:id="z014" ulx="20" uly="280" lrx="595" lry="298" corresp="#lb014" cert="medium" ana="#physical-line-zone"/><zone xml:id="z015" ulx="20" uly="298" lrx="595" lry="316" corresp="#lb015" cert="medium" ana="#physical-line-zone"/><zone xml:id="z016" ulx="20" uly="316" lrx="595" lry="334" corresp="#lb016" cert="medium" ana="#physical-line-zone"/><zone xml:id="z017" ulx="20" uly="334" lrx="595" lry="352" corresp="#lb017" cert="medium" ana="#physical-line-zone"/><zone xml:id="z018" ulx="20" uly="352" lrx="595" lry="370" corresp="#lb018" cert="medium" ana="#physical-line-zone"/><zone xml:id="z019" ulx="20" uly="370" lrx="595" lry="388" corresp="#lb019" cert="medium" ana="#physical-line-zone"/><zone xml:id="z020" ulx="20" uly="388" lrx="595" lry="406" corresp="#lb020" cert="medium" ana="#physical-line-zone"/><zone xml:id="z021" ulx="20" uly="406" lrx="595" lry="424" corresp="#lb021" cert="medium" ana="#physical-line-zone"/><zone xml:id="z022" ulx="20" uly="424" lrx="595" lry="442" corresp="#lb022" cert="medium" ana="#physical-line-zone"/><zone xml:id="z023" ulx="20" uly="442" lrx="595" lry="460" corresp="#lb023" cert="medium" ana="#physical-line-zone"/><zone xml:id="z024" ulx="20" uly="460" lrx="595" lry="478" corresp="#lb024" cert="medium" ana="#physical-line-zone"/><zone xml:id="z025" ulx="20" uly="478" lrx="595" lry="496" corresp="#lb025" cert="medium" ana="#physical-line-zone"/><zone xml:id="z026" ulx="20" uly="496" lrx="595" lry="514" corresp="#lb026" cert="medium" ana="#physical-line-zone"/><zone xml:id="z027" ulx="20" uly="514" lrx="595" lry="532" corresp="#lb027" cert="medium" ana="#physical-line-zone"/><zone xml:id="z028" ulx="20" uly="532" lrx="595" lry="550" corresp="#lb028" cert="medium" ana="#physical-line-zone"/><zone xml:id="z029" ulx="20" uly="550" lrx="595" lry="568" corresp="#lb029" cert="medium" ana="#physical-line-zone"/><zone xml:id="z030" ulx="20" uly="568" lrx="595" lry="586" corresp="#lb030" cert="medium" ana="#physical-line-zone"/><zone xml:id="z031" ulx="20" uly="586" lrx="595" lry="604" corresp="#lb031" cert="medium" ana="#physical-line-zone"/><zone xml:id="z032" ulx="20" uly="604" lrx="595" lry="622" corresp="#lb032" cert="medium" ana="#physical-line-zone"/><zone xml:id="z033" ulx="20" uly="622" lrx="595" lry="640" corresp="#lb033" cert="medium" ana="#physical-line-zone"/><zone xml:id="z034" ulx="20" uly="640" lrx="595" lry="658" corresp="#lb034" cert="medium" ana="#physical-line-zone"/><zone xml:id="z035" ulx="20" uly="658" lrx="595" lry="676" corresp="#lb035" cert="medium" ana="#physical-line-zone"/><zone xml:id="z036" ulx="20" uly="676" lrx="595" lry="696" corresp="#lb036" cert="medium" ana="#physical-line-zone"/><zone xml:id="z037" ulx="20" uly="696" lrx="595" lry="716" corresp="#lb037" cert="medium" ana="#physical-line-zone"/><zone xml:id="z038" ulx="20" uly="720" lrx="595" lry="742" corresp="#lb038" cert="medium" ana="#physical-line-zone"/><zone xml:id="z039" ulx="20" uly="744" lrx="595" lry="768" corresp="#lb039" cert="medium" ana="#physical-line-zone"/><zone xml:id="z040" ulx="20" uly="768" lrx="595" lry="790" corresp="#lb040" cert="medium" ana="#physical-line-zone"/><zone xml:id="z041" ulx="20" uly="790" lrx="595" lry="816" corresp="#lb041" cert="medium" ana="#physical-line-zone"/><zone xml:id="z042" ulx="20" uly="816" lrx="595" lry="844" corresp="#lb042" cert="medium" ana="#physical-line-zone"/></surface>
+      <graphic url="data/images/single/Lettera_di_Kurt_Cobain.jpg" mimeType="image/jpeg" width="720px" height="960px"/>
+    <zone xml:id="z001" ulx="101" uly="18" lrx="719" lry="75" corresp="#lb001" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z002" ulx="86" uly="67" lrx="719" lry="115" corresp="#lb002" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z003" ulx="78" uly="106" lrx="719" lry="132" corresp="#lb003" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z004" ulx="74" uly="123" lrx="719" lry="149" corresp="#lb004" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z005" ulx="71" uly="140" lrx="719" lry="166" corresp="#lb005" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z006" ulx="67" uly="157" lrx="719" lry="184" corresp="#lb006" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z007" ulx="67" uly="175" lrx="719" lry="201" corresp="#lb007" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z008" ulx="65" uly="192" lrx="719" lry="218" corresp="#lb008" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z009" ulx="65" uly="209" lrx="719" lry="235" corresp="#lb009" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z010" ulx="67" uly="226" lrx="719" lry="252" corresp="#lb010" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z011" ulx="66" uly="243" lrx="719" lry="269" corresp="#lb011" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z012" ulx="64" uly="260" lrx="719" lry="285" corresp="#lb012" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z013" ulx="65" uly="276" lrx="660" lry="302" corresp="#lb013" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z014" ulx="61" uly="293" lrx="657" lry="319" corresp="#lb014" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z015" ulx="61" uly="310" lrx="681" lry="335" corresp="#lb015" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z016" ulx="62" uly="326" lrx="680" lry="352" corresp="#lb016" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z017" ulx="71" uly="343" lrx="678" lry="369" corresp="#lb017" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z018" ulx="74" uly="360" lrx="677" lry="385" corresp="#lb018" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z019" ulx="68" uly="376" lrx="693" lry="402" corresp="#lb019" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z020" ulx="72" uly="393" lrx="693" lry="420" corresp="#lb020" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z021" ulx="70" uly="411" lrx="697" lry="439" corresp="#lb021" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z022" ulx="68" uly="430" lrx="693" lry="458" corresp="#lb022" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z023" ulx="59" uly="449" lrx="693" lry="477" corresp="#lb023" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z024" ulx="59" uly="468" lrx="713" lry="496" corresp="#lb024" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z025" ulx="56" uly="487" lrx="708" lry="514" corresp="#lb025" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z026" ulx="57" uly="506" lrx="666" lry="532" corresp="#lb026" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z027" ulx="49" uly="524" lrx="699" lry="550" corresp="#lb027" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z028" ulx="50" uly="542" lrx="655" lry="568" corresp="#lb028" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z029" ulx="57" uly="560" lrx="707" lry="586" corresp="#lb029" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z030" ulx="57" uly="578" lrx="700" lry="604" corresp="#lb030" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z031" ulx="58" uly="595" lrx="714" lry="620" corresp="#lb031" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z032" ulx="57" uly="611" lrx="714" lry="637" corresp="#lb032" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z033" ulx="52" uly="628" lrx="701" lry="654" corresp="#lb033" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z034" ulx="52" uly="645" lrx="719" lry="670" corresp="#lb034" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z035" ulx="54" uly="655" lrx="719" lry="688" corresp="#lb035" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z036" ulx="75" uly="675" lrx="666" lry="710" corresp="#lb036" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z037" ulx="88" uly="690" lrx="407" lry="720" corresp="#lb037" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z038" ulx="89" uly="708" lrx="409" lry="752" corresp="#lb038" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z039" ulx="99" uly="738" lrx="408" lry="790" corresp="#lb039" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z040" ulx="108" uly="775" lrx="398" lry="832" corresp="#lb040" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z041" ulx="102" uly="805" lrx="712" lry="878" corresp="#lb041" cert="medium" ana="#physical-line-zone"/>
+      <zone xml:id="z042" ulx="102" uly="835" lrx="712" lry="938" corresp="#lb042" cert="medium" ana="#physical-line-zone"/>
+    </surface>
   </facsimile>
   <text xml:lang="en">
-    <front xml:lang="it" xml:id="front-info-edizione"><div type="editorial-introduction" xml:id="info-edizione"><head>Informazioni sull’edizione</head><div type="document"><head>Il documento</head><p>L’edizione presenta la lettera manoscritta comunemente nota come «lettera d’addio di Kurt Cobain». Il titolo editoriale adottato è «Lettera a Boddah», forma meno interpretativa e direttamente ricavata dall’incipit del testimone. La denominazione tradizionale è conservata come dato di ricezione.</p><p>Il documento viene trattato come oggetto testuale e documentario contemporaneo, non soltanto come fonte biografica: l’edizione integra descrizione del testimone, facsimile, trascrizione diplomatica, traduzione, named entities, authority control e riferimenti bibliografici.</p></div><div type="material-description" xml:id="info-descrizione-materiale"><head>Descrizione materiale</head><p>Il documento è noto in questa edizione attraverso riproduzioni digitali. Le fonti documentarie recenti descrivono il supporto visibile nelle fotografie della scena come una tovaglietta da ristorante, scritta in inchiostro rosso e fissata al terriccio di una fioriera mediante una penna rossa. Tali dati sono registrati come informazioni documentarie indirette e non come osservazioni autoptiche dell’editore.</p><p>Lo stato conservativo attuale dell’originale non è stato verificato direttamente. Il facsimile mostra pieghe, variazioni di contrasto, cancellature e aree di diversa leggibilità. La trascrizione è allineata a 42 righe fisiche del facsimile.</p></div><div type="editorial-criteria"><head>Criteri editoriali</head><p>La trascrizione diplomatica conserva la segmentazione in righe fisiche del facsimile e registra gli interventi autografi visibili. Le aggiunte sono codificate con add, le cancellature con del; quando il testo cancellato non è leggibile con sicurezza, la lacuna è registrata con gap senza scioglimento congetturale.</p><p>La traduzione italiana costituisce un secondo livello selezionabile in EVT 2. Per garantire la separazione fra trascrizione e traduzione, ogni riga è organizzata mediante lb seguito da choice/orig/reg.</p></div><div type="handwriting-attribution"><head>Attribuzione grafica delle ultime righe</head><p>Il <ref target="#bibl-wsp-lab">Washington State Patrol Crime Laboratory Report 194-12204</ref>, datato 22 aprile 1994, attribuì la nota esaminata a Kurt Cobain senza distinguere separatamente le ultime righe dal resto del documento.</p><p>Analisi private successive hanno rilevato differenze grafiche nelle ultime quattro righe fisiche del facsimile (lb039–lb042). La presente edizione registra tale area come attribuzione controversa, mantenendo distinta la conclusione ufficiale del 1994 dalle analisi di <ref target="#bibl-green-2025">James A. Green</ref>, <ref target="#bibl-martin-2026">Mozelle Martin</ref> e dallo studio multidisciplinare di <ref target="#bibl-burnett-2025">Burnett et al.</ref>, senza assegnare editorialmente una seconda mano.</p><p xml:id="legend-disputed-hand">Nella trascrizione diplomatica le righe 39–42 sono visualizzate in rosso scuro. Il colore segnala un’area di attribuzione grafica controversa e non equivale all’assegnazione certa delle righe a una seconda mano. La traduzione italiana resta graficamente neutra.</p></div><div type="facsimile"><head>Facsimile e collegamento testo–immagine</head><p>Per la visualizzazione in EVT 2 è utilizzata un’immagine locale, in modo da garantire stabilità al prototipo. Il facsimile è segmentato in zone corrispondenti alle 42 righe fisiche; ogni lb è collegato alla relativa zone mediante corresp.</p><p>Il manifest IIIF, se disponibile o individuato in seguito, dovrà essere conservato nel TEI come riferimento scientifico e archivistico, mentre l’immagine locale può continuare a essere usata come fallback stabile in EVT 2.</p></div><div type="semantic-enrichment"><head>Entità nominate e arricchimento semantico</head><p>Le persone, le organizzazioni e i luoghi rilevanti sono codificati come named entities e collegati, quando possibile, ad authority aperte come Wikidata. Le schede comprendono forme normalizzate del nome, identificativi, dati biografici essenziali e relazioni.</p><p>Il testo è inoltre arricchito con concetti musicali, performativi e culturali — tra cui punk rock, grunge, musica, pubblico, fan, empatia, amore e scrittura — così da rendere esplicita la rete semantica attivata dal documento.</p></div><div type="sources"><head>Fonti e riferimenti</head><p>La ricostruzione documentaria utilizza il <ref target="#bibl-spd-case">fascicolo del Seattle Police Department 94-156500</ref>, il <ref target="#bibl-wsp-lab">Washington State Patrol Crime Laboratory Report 194-12204</ref>, studi e analisi recenti sulla grafia delle ultime righe, nonché authority aperte per la normalizzazione delle entità.</p><p>I riferimenti completi sono conservati nei registri bibliografici del TEI e costituiscono il dossier documentario dell’edizione. Le fonti giornalistiche sono usate esclusivamente per la ricezione contemporanea del dibattito e non sostituiscono le fonti primarie o le perizie.</p></div><div type="edition-access" xml:id="info-accesso-edizione"><head>Edizione, disponibilità e riproduzione digitale</head><p>La descrizione del testimone è stata compilata a partire dal facsimile digitale locale e dai riferimenti documentari pubblici citati nell’edizione. Il prototipo è destinato a uso didattico e scientifico nell’ambito di una tesi.</p><p>Per la visualizzazione in EVT 2 viene utilizzato il facsimile locale data/images/single/Lettera_di_Kurt_Cobain.jpg. Il manifest IIIF, qualora individuato, sarà conservato nel TEI come riferimento scientifico e archivistico, mentre l’immagine locale potrà continuare a funzionare come fallback stabile.</p></div></div></front><body>
+    <front xml:lang="it" xml:id="front-info-edizione">
+      <div type="editorial-introduction" xml:id="info-edizione">
+        <head>Informazioni sull’edizione</head>
+        <div type="document">
+          <head>Il documento</head>
+          <p>L’edizione presenta la lettera manoscritta comunemente nota come «lettera d’addio di Kurt Cobain». 
+            Il titolo editoriale adottato è «Lettera a Boddah», forma meno interpretativa e direttamente ricavata dall’incipit del testimone. 
+            La denominazione tradizionale è conservata come dato di ricezione.</p>
+          <p>Il documento viene trattato come oggetto testuale e documentario contemporaneo, 
+            non soltanto come fonte biografica: l’edizione integra descrizione del testimone, facsimile, 
+            trascrizione diplomatica, traduzione, named entities, authority control e riferimenti bibliografici.</p>
+        </div>
+        <div type="material-description" xml:id="info-descrizione-materiale">
+          <head>Descrizione materiale</head>
+          <p>Il documento è noto in questa edizione attraverso riproduzioni digitali. 
+            Le fonti documentarie recenti descrivono il supporto visibile nelle fotografie della scena come una tovaglietta da ristorante, 
+            scritta in inchiostro rosso e fissata al terriccio di una fioriera mediante una penna rossa. 
+            Tali dati sono registrati come informazioni documentarie indirette e non come osservazioni autoptiche dell’editore.</p>
+          <p>Lo stato conservativo attuale dell’originale non è stato verificato direttamente. Il facsimile mostra pieghe, variazioni di contrasto, 
+            cancellature e aree di diversa leggibilità. La trascrizione è allineata a 42 righe fisiche del facsimile.</p>
+        </div>
+        <div type="editorial-criteria">
+          <head>Criteri editoriali</head>
+          <p>La trascrizione diplomatica conserva la segmentazione in righe fisiche del facsimile e registra gli interventi autografi visibili. 
+            Le aggiunte sono codificate con add, le cancellature con del; quando il testo cancellato non è leggibile con sicurezza, 
+            la lacuna è registrata con gap senza scioglimento congetturale.</p>
+          <p>La traduzione italiana costituisce un secondo livello selezionabile in EVT 2. 
+            Per garantire la separazione fra trascrizione e traduzione, ogni riga è organizzata mediante lb seguito da choice/orig/reg.</p>
+          <p>Nella visualizzazione, una cancellatura illeggibile è rappresentata con il segno ⟦…⟧: 
+            la convenzione rende visibile il fenomeno senza proporre una ricostruzione del testo soppresso.</p>
+          <p>I riferimenti indiretti chiaramente determinabili — per esempio alla moglie, alla figlia o ai Nirvana — 
+            sono registrati nel TEI mediante rs, anche quando EVT 2 non li presenta come schede di named entity.</p>
+        </div>
+        <div type="handwriting-attribution">
+          <head>Attribuzione grafica delle ultime righe</head>
+          <p>Il <ref target="#bibl-wsp-lab">Washington State Patrol Crime Laboratory Report 194-12204</ref>, 
+            datato 22 aprile 1994, attribuì la nota esaminata a Kurt Cobain senza distinguere separatamente le ultime righe dal resto del documento.</p>
+          <p>Analisi private successive hanno rilevato differenze grafiche nelle ultime quattro righe fisiche del facsimile (lb039–lb042). 
+            La presente edizione registra tale area come attribuzione controversa, 
+            mantenendo distinta la conclusione ufficiale del 1994 dalle analisi di <ref target="#bibl-green-2025">James A. Green</ref>, 
+            <ref target="#bibl-martin-2026">Mozelle Martin</ref> e dallo studio multidisciplinare di <ref target="#bibl-burnett-2025">Burnett et al.</ref>, 
+            senza assegnare editorialmente una seconda mano.</p>
+          <p xml:id="legend-disputed-hand">Nella trascrizione diplomatica le righe 39–42 sono visualizzate in rosso scuro. 
+            Il colore segnala un’area di attribuzione grafica controversa e non equivale all’assegnazione certa delle righe a una seconda mano. 
+            La traduzione italiana resta graficamente neutra.</p>
+        </div>
+        <div type="facsimile">
+          <head>Facsimile e collegamento testo–immagine</head>
+          <p>Per la visualizzazione in EVT 2 è utilizzata un’immagine locale di 720 × 960 pixel, in modo da garantire stabilità al prototipo. 
+            Il facsimile è segmentato in zone corrispondenti alle 42 righe fisiche; ogni lb è collegato alla relativa zone mediante corresp.</p>
+          <p>Il manifest IIIF, se disponibile o individuato in seguito, dovrà essere conservato nel TEI come riferimento scientifico e archivistico, 
+            mentre l’immagine locale può continuare a essere usata come fallback stabile in EVT 2.</p>
+        </div>
+        <div type="semantic-enrichment">
+          <head>Entità nominate e arricchimento semantico</head>
+          <p>Le persone, le organizzazioni e i luoghi rilevanti sono codificati come named entities e collegati, quando possibile, ad authority aperte come Wikidata. 
+            Le schede comprendono forme normalizzate del nome, identificativi, dati biografici essenziali e relazioni.</p>
+          <p>Il testo è inoltre arricchito con concetti musicali, performativi e culturali — tra cui punk rock, grunge, musica, pubblico, fan, empatia, amore e scrittura — 
+            così da rendere esplicita la rete semantica attivata dal documento.</p>
+        </div>
+        <div type="sources">
+          <head>Fonti e riferimenti</head>
+          <p>La ricostruzione documentaria utilizza il <ref target="#bibl-spd-case">fascicolo del Seattle Police Department 94-156500</ref>, 
+            il <ref target="#bibl-wsp-lab">Washington State Patrol Crime Laboratory Report 194-12204</ref>, studi e analisi recenti sulla grafia delle ultime righe, 
+            nonché authority aperte per la normalizzazione delle entità.</p>
+          <p>I riferimenti completi sono conservati nei registri bibliografici del TEI e costituiscono il dossier documentario dell’edizione. 
+            Le fonti giornalistiche sono usate esclusivamente per la ricezione contemporanea del dibattito e non sostituiscono le fonti primarie o le perizie.</p>
+        </div>
+        <div type="edition-access" xml:id="info-accesso-edizione">
+          <head>Edizione, disponibilità e riproduzione digitale</head>
+          <p>La descrizione del testimone è stata compilata a partire dal facsimile digitale locale e dai riferimenti documentari pubblici citati nell’edizione. 
+            Il prototipo è destinato a uso didattico e scientifico nell’ambito di una tesi.</p>
+          <p>Per la visualizzazione in EVT 2 viene utilizzato il facsimile locale data/images/single/Lettera_di_Kurt_Cobain.jpg. 
+            Il manifest IIIF, qualora individuato, sarà conservato nel TEI come riferimento scientifico e archivistico, 
+            mentre l’immagine locale potrà continuare a funzionare come fallback stabile.</p>
+        </div>
+      </div>
+    </front>
+    <body>
       <div type="letter" xml:id="letter-cobain">
         <pb xml:id="pb001" n="1" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#surface-1"/>
         <p rend="verse-lines" ana="#physical-line-map">
@@ -254,17 +711,17 @@
         <lb xml:id="lb006" n="6" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z006"/>
           <choice><orig xml:lang="en">involved with <term ref="#concept-independence" key="concept-independence">independence</term> and the embracement of your <term ref="#concept-community" key="concept-community">community</term> has proven to</orig><reg xml:lang="it" type="translation">legata all’<term ref="#concept-independence" key="concept-independence">indipendenza</term> e all’abbracciare la propria <term ref="#concept-community" key="concept-community">comunità</term> si sono rivelati</reg></choice>
         <lb xml:id="lb007" n="7" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z007"/><choice>
-          <orig xml:lang="en">be very true. I haven’t felt the excitement of listening to <del xml:id="del001" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦cancellatura, 1 parola⟧</supplied></del> as well as creating</orig><reg xml:lang="it" type="translation">molto veri. Non ho più provato l’eccitazione dell’ascoltare e del creare</reg></choice>
+          <orig xml:lang="en">be very true. I haven’t felt the excitement of listening to <del xml:id="del001" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦…⟧</supplied></del> as well as creating</orig><reg xml:lang="it" type="translation">molto veri. Non ho più provato l’eccitazione dell’ascoltare e del creare</reg></choice>
         <lb xml:id="lb008" n="8" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z008"/>
           <choice><orig xml:lang="en"><term ref="#concept-music" key="concept-music">music</term> along with <term ref="#concept-reading" key="concept-reading">reading</term> and <term ref="#concept-writing" key="concept-writing">writing</term> for too many years now.</orig><reg xml:lang="it" type="translation"><term ref="#concept-music" key="concept-music">musica</term>, insieme al <term ref="#concept-reading" key="concept-reading">leggere</term> e allo <term ref="#concept-writing" key="concept-writing">scrivere</term>, ormai da troppi anni.</reg></choice>
         <lb xml:id="lb009" n="9" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z009"/>
           <choice><orig xml:lang="en">I feel guilty beyond words about these things.</orig><reg xml:lang="it" type="translation">Mi sento in colpa oltre ogni parola per queste cose.</reg></choice>
         <lb xml:id="lb010" n="10" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z010"/>
-          <choice><orig xml:lang="en">For example when we’re <term ref="#concept-stage" key="concept-stage">back stage</term> and <del xml:id="del002" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="2" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦cancellatura, 2 parole⟧</supplied></del> the lights go out and the manic roar of the</orig><reg xml:lang="it" type="translation">Per esempio, quando siamo nel <term ref="#concept-stage" key="concept-stage">backstage</term> e le luci si spengono e il ruggito maniacale della</reg></choice>
+          <choice><orig xml:lang="en">For example when <rs type="org" ref="#nirvana" cert="medium">we</rs>’re back stage and <del xml:id="del002" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="2" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦…⟧</supplied></del> the lights go out and the manic roar of the</orig><reg xml:lang="it" type="translation">Per esempio, quando siamo nel backstage e le luci si spengono e il ruggito maniacale della</reg></choice>
         <lb xml:id="lb011" n="11" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z011"/>
           <choice><orig xml:lang="en"><term ref="#concept-audience" key="concept-audience">crowd</term> begins, it doesn’t affect me the way in which it did for <persName ref="#freddie-mercury" key="freddie-mercury">Freddie Mercury</persName>, who</orig><reg xml:lang="it" type="translation"><term ref="#concept-audience" key="concept-audience">folla</term> comincia, non mi colpisce come accadeva a <persName ref="#freddie-mercury" key="freddie-mercury">Freddie Mercury</persName>, che</reg></choice>
         <lb xml:id="lb012" n="12" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z012"/>
-          <choice><orig xml:lang="en">seemed to love, relish in the love and adoration from the crowd which is something I totally admire</orig><reg xml:lang="it" type="translation">sembrava amare e godere dell’amore e dell’adorazione della folla, cosa che ammiro totalmente</reg></choice>
+          <choice><orig xml:lang="en">seemed to <term ref="#concept-love" key="concept-love">love</term>, relish in the <term ref="#concept-love" key="concept-love">love</term> and adoration from the <term ref="#concept-audience" key="concept-audience">crowd</term> which is something I totally admire</orig><reg xml:lang="it" type="translation">sembrava <term ref="#concept-love" key="concept-love">amare</term> e godere dell’<term ref="#concept-love" key="concept-love">amore</term> e dell’adorazione della <term ref="#concept-audience" key="concept-audience">folla</term>, cosa che ammiro totalmente</reg></choice>
         <lb xml:id="lb013" n="13" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z013"/>
           <choice><orig xml:lang="en">and envy. The fact is, I can’t fool you. Any one of you.</orig><reg xml:lang="it" type="translation">e invidio. Il fatto è che non posso ingannarvi. Nessuno di voi.</reg></choice>
         <lb xml:id="lb014" n="14" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z014"/>
@@ -272,31 +729,31 @@
         <lb xml:id="lb015" n="15" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z015"/>
           <choice><orig xml:lang="en">rip people off by faking it and pretending as if I’m having 100% fun.</orig><reg xml:lang="it" type="translation">imbrogliare la gente fingendo e comportandomi come se mi stessi divertendo al 100%.</reg></choice>
         <lb xml:id="lb016" n="16" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z016"/>
-          <choice><orig xml:lang="en">Sometimes I feel as if I should have a punch-in time clock before I walk out on stage.</orig><reg xml:lang="it" type="translation">A volte sento che dovrei avere un cartellino da timbrare prima di salire sul palco.</reg></choice>
+          <choice><orig xml:lang="en">Sometimes I feel as if I should have a punch-in time clock before I walk out on <term ref="#concept-stage" key="concept-stage">stage</term>.</orig><reg xml:lang="it" type="translation">A volte sento che dovrei avere un cartellino da timbrare prima di salire sul <term ref="#concept-stage" key="concept-stage">palco</term>.</reg></choice>
         <lb xml:id="lb017" n="17" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z017"/>
           <choice><orig xml:lang="en">I’ve tried everything within my power to appreciate it (and I do, God, believe me I do,</orig><reg xml:lang="it" type="translation">Ho provato tutto ciò che era in mio potere per apprezzarlo — e lo apprezzo, Dio, credetemi,</reg></choice>
         <lb xml:id="lb018" n="18" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z018"/>
-          <choice><orig xml:lang="en">but it’s not enough). I appreciate the fact that I and we have affected and entertained</orig><reg xml:lang="it" type="translation">ma non basta. Apprezzo il fatto che io e noi abbiamo influenzato e intrattenuto</reg></choice>
+          <choice><orig xml:lang="en">but it’s not enough). I appreciate the fact that I and <rs type="org" ref="#nirvana" cert="medium">we</rs> have affected and entertained</orig><reg xml:lang="it" type="translation">ma non basta. Apprezzo il fatto che io e <rs type="org" ref="#nirvana" cert="medium">noi</rs> abbiamo influenzato e intrattenuto</reg></choice>
         <lb xml:id="lb019" n="19" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z019"/>
-          <choice><orig xml:lang="en">a lot of people. It must be one of those <del xml:id="del003" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦cancellatura, 1 parola⟧</supplied></del> narcissists who only appreciate things when they’re</orig><reg xml:lang="it" type="translation">molte persone. Devo essere uno di quei narcisisti che apprezzano le cose solo quando</reg></choice>
+          <choice><orig xml:lang="en">a lot of people. It must be one of those <del xml:id="del003" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦…⟧</supplied></del> narcissists who only appreciate things when they’re</orig><reg xml:lang="it" type="translation">molte persone. Devo essere uno di quei narcisisti che apprezzano le cose solo quando</reg></choice>
         <lb xml:id="lb020" n="20" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z020"/>
           <choice><orig xml:lang="en">gone. I’m too sensitive. I need to be slightly numb in order to regain the enthusiasm</orig><reg xml:lang="it" type="translation">sono perdute. Sono troppo sensibile. Ho bisogno di essere un po’ intorpidito per recuperare l’entusiasmo</reg></choice>
         <lb xml:id="lb021" n="21" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z021"/>
-          <choice><orig xml:lang="en">I once had as a child. On our last 3 tours, I’ve had a much better appreciation</orig><reg xml:lang="it" type="translation">che avevo da bambino. Nei nostri ultimi tre tour ho avuto un apprezzamento molto maggiore</reg></choice>
+          <choice><orig xml:lang="en">I once had as a child. On <rs type="org" ref="#nirvana" cert="high">our last 3 <term ref="#concept-concert-tour" key="concept-concert-tour">tours</term></rs>, I’ve had a much better appreciation</orig><reg xml:lang="it" type="translation">che avevo da bambino. Nei <rs type="org" ref="#nirvana" cert="high">nostri ultimi tre <term ref="#concept-concert-tour" key="concept-concert-tour">tour</term></rs> ho avuto un apprezzamento molto maggiore</reg></choice>
         <lb xml:id="lb022" n="22" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z022"/>
-          <choice><orig xml:lang="en">for all the people I’ve known personally and as fans of our music, but I still can’t get over</orig><reg xml:lang="it" type="translation">per tutte le persone che ho conosciuto personalmente e come fan della nostra musica, ma ancora non riesco a superare</reg></choice>
+          <choice><orig xml:lang="en">for all the people I’ve known personally and as <term ref="#concept-fan" key="concept-fan">fans</term> of <rs type="org" ref="#nirvana" cert="high">our <term ref="#concept-music" key="concept-music">music</term></rs>, but I still can’t get over</orig><reg xml:lang="it" type="translation">per tutte le persone che ho conosciuto personalmente e come <term ref="#concept-fan" key="concept-fan">fan</term> della <rs type="org" ref="#nirvana" cert="high">nostra <term ref="#concept-music" key="concept-music">musica</term></rs>, ma ancora non riesco a superare</reg></choice>
         <lb xml:id="lb023" n="23" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z023"/>
-          <choice><orig xml:lang="en">the frustration, the guilt and <del xml:id="del004" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦cancellatura, 1 parola⟧</supplied></del> <term ref="#concept-empathy" key="concept-empathy">empathy</term> I have for everyone. There’s good in all of us and I</orig><reg xml:lang="it" type="translation">la frustrazione, la colpa e l’<term ref="#concept-empathy" key="concept-empathy">empatia</term> che provo per tutti. C’è del buono in ognuno di noi e io</reg></choice>
+          <choice><orig xml:lang="en">the frustration, the guilt and <del xml:id="del004" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦…⟧</supplied></del> <term ref="#concept-empathy" key="concept-empathy">empathy</term> I have for everyone. There’s good in all of us and I</orig><reg xml:lang="it" type="translation">la frustrazione, la colpa e l’<term ref="#concept-empathy" key="concept-empathy">empatia</term> che provo per tutti. C’è del buono in ognuno di noi e io</reg></choice>
         <lb xml:id="lb024" n="24" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z024"/>
-          <choice><orig xml:lang="en">think I simply love people too much, so much that it makes me feel too fucking sad. <del xml:id="del005" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦cancellatura, 1 parola⟧</supplied></del> The sad</orig><reg xml:lang="it" type="translation">penso di amare semplicemente troppo le persone, così tanto da farmi sentire fottutamente triste. Il triste</reg></choice>
+          <choice><orig xml:lang="en">think I simply <term ref="#concept-love" key="concept-love">love</term> people too much, so much that it makes me feel too fucking sad. <del xml:id="del005" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦…⟧</supplied></del> The sad</orig><reg xml:lang="it" type="translation">penso di <term ref="#concept-love" key="concept-love">amare</term> semplicemente troppo le persone, così tanto da farmi sentire fottutamente triste. Il triste</reg></choice>
         <lb xml:id="lb025" n="25" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z025"/>
           <choice><orig xml:lang="en">little, sensitive, unappreciative, <term ref="#concept-pisces" key="concept-pisces">Pisces</term>, <persName ref="#jesus-christ" key="jesus-christ">Jesus</persName> man. Why don’t you just enjoy it? I don’t know!</orig><reg xml:lang="it" type="translation">piccolo, sensibile, ingrato, <term ref="#concept-pisces" key="concept-pisces">Pesci</term>, uomo-<persName ref="#jesus-christ" key="jesus-christ">Gesù</persName>. Perché non te lo godi e basta? Non lo so!</reg></choice>
         <lb xml:id="lb026" n="26" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z026"/>
-          <choice><orig xml:lang="en">I have a goddess of a wife who sweats ambition and <term ref="#concept-empathy" key="concept-empathy">empathy</term> and a daughter who reminds</orig><reg xml:lang="it" type="translation">Ho una dea per moglie che trasuda ambizione ed <term ref="#concept-empathy" key="concept-empathy">empatia</term> e una figlia che mi ricorda</reg></choice>
+          <choice><orig xml:lang="en">I have a goddess of a <rs type="person" ref="#courtney-love" cert="high">wife</rs> who sweats ambition and <term ref="#concept-empathy" key="concept-empathy">empathy</term> and a <rs type="person" ref="#frances-cobain" cert="high">daughter</rs> who reminds</orig><reg xml:lang="it" type="translation">Ho una dea per <rs type="person" ref="#courtney-love" cert="high">moglie</rs> che trasuda ambizione ed <term ref="#concept-empathy" key="concept-empathy">empatia</term> e una <rs type="person" ref="#frances-cobain" cert="high">figlia</rs> che mi ricorda</reg></choice>
         <lb xml:id="lb027" n="27" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z027"/>
-          <choice><orig xml:lang="en">me too much of what I used to be, full of <term ref="#concept-love" key="concept-love">love</term> and <term ref="#concept-happiness" key="concept-happiness">joy</term>, kissing every person she meets</orig><reg xml:lang="it" type="translation">troppo ciò che ero, piena di <term ref="#concept-love" key="concept-love">amore</term> e <term ref="#concept-happiness" key="concept-happiness">gioia</term>, mentre bacia ogni persona che incontra</reg></choice>
+          <choice><orig xml:lang="en">me too much of what I used to be, full of <term ref="#concept-love" key="concept-love">love</term> and <term ref="#concept-happiness" key="concept-happiness">joy</term>, kissing every person <rs type="person" ref="#frances-cobain" cert="high">she</rs> meets</orig><reg xml:lang="it" type="translation">troppo ciò che ero, piena di <term ref="#concept-love" key="concept-love">amore</term> e <term ref="#concept-happiness" key="concept-happiness">gioia</term>, mentre bacia ogni persona che incontra</reg></choice>
         <lb xml:id="lb028" n="28" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z028"/>
-          <choice><orig xml:lang="en">because everyone is good and will do her no harm. And that terrifies me to the point to where I can</orig><reg xml:lang="it" type="translation">perché tutti sono buoni e non le faranno del male. E questo mi terrorizza al punto che posso</reg></choice>
+          <choice><orig xml:lang="en">because everyone is good and will do <rs type="person" ref="#frances-cobain" cert="high">her</rs> no harm. And that terrifies me to the point to where I can</orig><reg xml:lang="it" type="translation">perché tutti sono buoni e non <rs type="person" ref="#frances-cobain" cert="high">le</rs> faranno del male. E questo mi terrorizza al punto che posso</reg></choice>
         <lb xml:id="lb029" n="29" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z029"/>
           <choice><orig xml:lang="en">barely function. I can’t stand the thought of <persName ref="#frances-cobain" key="frances-cobain">Frances</persName> becoming the miserable, self-destructive</orig><reg xml:lang="it" type="translation">a malapena funzionare. Non sopporto il pensiero che <persName ref="#frances-cobain" key="frances-cobain">Frances</persName> diventi la miserabile, autodistruttiva</reg></choice>
         <lb xml:id="lb030" n="30" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z030"/>
@@ -310,53 +767,29 @@
         <lb xml:id="lb034" n="34" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z034"/>
           <choice><orig xml:lang="en">stomach for your letters and concern during the past years. I’m too much of an erratic, moody baby!</orig><reg xml:lang="it" type="translation">stomaco per le vostre lettere e la vostra preoccupazione negli anni passati. Sono troppo un bambino instabile e lunatico!</reg></choice>
         <lb xml:id="lb035" n="35" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z035"/>
-          <choice><orig xml:lang="en">I don’t have the <del xml:id="del006" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦cancellatura, 1 parola⟧</supplied></del> passion anymore, and so remember, <quote source="#bibl-my-my-hey-hey">it’s better to burn out than to</quote></orig><reg xml:lang="it" type="translation">Non ho più la passione, e quindi ricordate, <quote source="#bibl-my-my-hey-hey">è meglio bruciare in fretta che</quote></reg></choice>
+          <choice><orig xml:lang="en">I don’t have the <del xml:id="del006" rend="overstrike" cert="low" ana="#authorial-deletion #unread-deleted-text"><gap reason="illegible" quantity="1" unit="word"/><supplied reason="illegible" cert="low" ana="#evt-visible-placeholder">⟦…⟧</supplied></del> passion anymore, and so remember, <quote source="#bibl-my-my-hey-hey">it’s better to burn out than to</quote></orig><reg xml:lang="it" type="translation">Non ho più la passione, e quindi ricordate, <quote source="#bibl-my-my-hey-hey">è meglio bruciare in fretta che</quote></reg></choice>
         <lb xml:id="lb036" n="36" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z036"/>
-          <choice><orig xml:lang="en"><quote source="#bibl-my-my-hey-hey">fade away</quote>Peace, <term ref="#concept-love" key="concept-love">Love</term>, <term ref="#concept-empathy" key="concept-empathy">Empathy</term>.</orig><reg xml:lang="it" type="translation"><quote source="#bibl-my-my-hey-hey">spegnersi lentamente</quote>Pace, <term ref="#concept-love" key="concept-love">Amore</term>, <term ref="#concept-empathy" key="concept-empathy">Empatia</term>.</reg></choice>
+          <choice><orig xml:lang="en"><quote source="#bibl-my-my-hey-hey">fade away</quote>. <term ref="#concept-peace" key="concept-peace">Peace</term>, <term ref="#concept-love" key="concept-love">Love</term>, <term ref="#concept-empathy" key="concept-empathy">Empathy</term>.</orig><reg xml:lang="it" type="translation"><quote source="#bibl-my-my-hey-hey">spegnersi lentamente</quote>. <term ref="#concept-peace" key="concept-peace">Pace</term>, <term ref="#concept-love" key="concept-love">Amore</term>, <term ref="#concept-empathy" key="concept-empathy">Empatia</term>.</reg></choice>
         <lb xml:id="lb037" n="37" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z037"/>
           <choice><orig xml:lang="en"><persName ref="#kurt-cobain" key="kurt-cobain">Kurt Cobain</persName></orig><reg xml:lang="it" type="translation"><persName ref="#kurt-cobain" key="kurt-cobain">Kurt Cobain</persName></reg></choice>
         <lb xml:id="lb038" n="38" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z038"/>
           <choice><orig xml:lang="en"><persName ref="#frances-cobain" key="frances-cobain">Frances</persName> and <persName ref="#courtney-love" key="courtney-love">Courtney</persName>, I’ll be at your <sic>alter</sic>.</orig><reg xml:lang="it" type="translation"><persName ref="#frances-cobain" key="frances-cobain">Frances</persName> e <persName ref="#courtney-love" key="courtney-love">Courtney</persName>, sarò al vostro altare.</reg></choice>
         <lb xml:id="lb039" n="39" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z039" ana="#handwriting-attribution-disputed" rend="handwriting-disputed"/>
-          <choice><orig xml:lang="en" ana="#handwriting-attribution-disputed" rend="handwriting-disputed">Please <sic>Keep going</sic> <persName ref="#courtney-love" key="courtney-love">Courtney</persName>,</orig><reg xml:lang="it" type="translation">Per favore continua, <persName ref="#courtney-love" key="courtney-love">Courtney</persName>,</reg></choice>
+          <choice><orig xml:lang="en" ana="#handwriting-attribution-disputed" rend="handwriting-disputed">Please Keep going <persName ref="#courtney-love" key="courtney-love">Courtney</persName>,</orig><reg xml:lang="it" type="translation">Per favore continua, <persName ref="#courtney-love" key="courtney-love">Courtney</persName>,</reg></choice>
         <lb xml:id="lb040" n="40" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z040" ana="#handwriting-attribution-disputed" rend="handwriting-disputed"/>
           <choice><orig xml:lang="en" ana="#handwriting-attribution-disputed" rend="handwriting-disputed">for <persName ref="#frances-cobain" key="frances-cobain">Frances</persName></orig><reg xml:lang="it" type="translation">per <persName ref="#frances-cobain" key="frances-cobain">Frances</persName></reg></choice>
         <lb xml:id="lb041" n="41" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z041" ana="#handwriting-attribution-disputed" rend="handwriting-disputed"/>
-          <choice><orig xml:lang="en" ana="#handwriting-attribution-disputed" rend="handwriting-disputed">for her life, which will be so much happier</orig><reg xml:lang="it" type="translation">per la sua vita, che sarà molto più felice</reg></choice>
+          <choice><orig xml:lang="en" ana="#handwriting-attribution-disputed" rend="handwriting-disputed">for <rs type="person" ref="#frances-cobain" cert="high">her</rs> life, which will be so much happier</orig><reg xml:lang="it" type="translation">per la <rs type="person" ref="#frances-cobain" cert="high">sua</rs> vita, che sarà molto più felice</reg></choice>
         <lb xml:id="lb042" n="42" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z042" ana="#handwriting-attribution-disputed" rend="handwriting-disputed"/>
-          <choice><orig xml:lang="en" ana="#handwriting-attribution-disputed" rend="handwriting-disputed">without me. I LOVE YOU, I LOVE YOU!</orig><reg xml:lang="it" type="translation">senza di me. VI AMO, VI AMO!</reg></choice>
+          <choice><orig xml:lang="en" ana="#handwriting-attribution-disputed" rend="handwriting-disputed">without me. I <term ref="#concept-love" key="concept-love">LOVE</term> YOU, I <term ref="#concept-love" key="concept-love">LOVE</term> YOU!</orig><reg xml:lang="it" type="translation">senza di me. VI <term ref="#concept-love" key="concept-love">AMO</term>, VI <term ref="#concept-love" key="concept-love">AMO</term>!</reg></choice>
       </p>
       </div>
     </body>
   </text>
   <standOff>
-    <listBibl>
-      <bibl type="source-file">
-        <title>Tesi.xml</title>
-      </bibl>
-      <bibl type="facsimile-local">
-        <title>Lettera di Kurt Cobain.jpg</title>
-      </bibl>
-      <bibl type="documentary-reference">
-        <title>Seattle Police Department, Case Investigation Report 94-156500</title>
-      </bibl>
-      <bibl type="documentary-reference">
-        <title>Washington State Patrol Crime Laboratory Report 194-12204</title>
-        <note>Riferimento alla comparazione grafologica menzionata nelle fonti documentarie reperite.</note>
-      </bibl>
-
-      <bibl xml:id="bibl-wikidata-authorities" type="authority-dataset">
-        <title>Wikidata</title>
-        <note>Authority dataset usato per normalizzare persone, organizzazioni, luoghi e concetti culturali. Gli identificativi Q sono registrati nel TEI mediante idno o ref.</note>
-        <ptr target="https://www.wikidata.org/"/>
-      </bibl>
-      <bibl xml:id="bibl-my-my-hey-hey" type="cultural-reference">
-        <author ref="#neil-young">Neil Young</author>
-        <title>My My, Hey Hey (Out of the Blue)</title>
-        <date when="1979">1979</date>
-        <note>Riferimento culturale indiretto collegato alla citazione “it's better to burn out than to fade away”, riportata nel testo.</note>
-        <ptr target="https://www.wikidata.org/wiki/Q633"/>
-      </bibl>
-    </listBibl>
-  <spanGrp xml:id="spanGrp-handwriting-attribution" type="handwriting-attribution"><span xml:id="span-final-four-lines" from="#lb039" to="#lb042" ana="#handwriting-attribution-disputed" source="#bibl-martin-2026 #bibl-green-2025 #bibl-burnett-2025">Ultime quattro righe fisiche del facsimile: area di attribuzione grafica controversa secondo analisi private recenti; nessuna seconda mano è assegnata come fatto accertato dalla presente edizione.</span></spanGrp></standOff>
+    <spanGrp xml:id="spanGrp-handwriting-attribution" type="handwriting-attribution">
+      <span xml:id="span-final-four-lines" from="#lb039" to="#lb042" ana="#handwriting-attribution-disputed" source="#bibl-martin-2026 #bibl-green-2025 #bibl-burnett-2025">Ultime quattro righe fisiche del facsimile: 
+        area di attribuzione grafica controversa secondo analisi private recenti; nessuna seconda mano è assegnata come fatto accertato dalla presente edizione.</span>
+    </spanGrp>
+  </standOff>
 </TEI>
