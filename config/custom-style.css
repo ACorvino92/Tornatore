@@ -1,14 +1,9 @@
 /* ==============================================================
-   COB-TEI/EVT — Stili diplomatici puliti per EVT 2
-   Versione v0.11
-
-   EVT trasforma molti elementi TEI generici in HTML con classe
-   uguale al nome del tag: <del> => .del, <add> => .add, ecc.
-   Queste regole sono volutamente ridondanti per coprire build EVT
-   diverse e per sovrascrivere stili interni troppo invasivi.
+   Kurt Cobain - Lettera a Boddah — EVT 2
+   Foglio di stile editoriale definitivo
    ============================================================== */
 
-/* Concetti culturali: evidenziazione sobria, non invasiva */
+/* Concetti culturali / termini controllati */
 .term,
 span.term,
 [class~="term"] {
@@ -17,8 +12,7 @@ span.term,
   padding: 0 .08em !important;
 }
 
-/* Cancellature: niente blocchi rossi. La cancellatura resta visibile
-   ma con resa editoriale sobria. */
+/* Cancellature: resa sobria e non invasiva */
 .del,
 .DEL,
 span.del,
@@ -33,26 +27,27 @@ tei-del,
   text-decoration-line: line-through !important;
   text-decoration-thickness: 1px !important;
   text-decoration-style: solid !important;
-  text-decoration-color: rgba(40, 40, 40, 0.75) !important;
+  text-decoration-color: rgba(40, 40, 40, 0.70) !important;
   outline: none !important;
   border: 0 !important;
   box-shadow: none !important;
 }
 
-/* Segnaposto editoriale dentro cancellatura: non deve sembrare testo
-   manoscritto ricostruito. */
+/* Cancellatura illeggibile: simbolo editoriale discreto.
+   La quantità stimata resta nel TEI, in gap/@quantity. */
 .del .supplied,
 span.del span.supplied,
-.del supplied,
 [class~="del"] [class~="supplied"] {
-  color: #555 !important;
-  background: rgba(0, 0, 0, 0.045) !important;
-  border: 1px dotted rgba(0, 0, 0, 0.35) !important;
-  border-radius: 2px !important;
-  padding: 0 .18em !important;
-  margin: 0 .08em !important;
-  font-size: 0.78em !important;
+  display: inline-block !important;
+  color: #666 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 .06em !important;
+  margin: 0 .05em !important;
+  font-size: 0.72em !important;
   font-style: italic !important;
+  text-decoration: none !important;
   white-space: nowrap !important;
 }
 
@@ -80,26 +75,21 @@ tei-add,
 span.unclear,
 unclear,
 tei-unclear,
-[class~="unclear"],
-[class*=" unclear"],
-[class*="unclear "] {
+[class~="unclear"] {
   border-bottom: 1px dotted currentColor !important;
 }
 
-/* Supplied generale, fuori dalle cancellature */
+/* supplied generale, fuori dalle cancellature */
 .supplied,
 .SUPPLIED,
 span.supplied,
 supplied,
 tei-supplied,
-[class~="supplied"],
-[class*=" supplied"],
-[class*="supplied "] {
+[class~="supplied"] {
   font-style: italic !important;
 }
 
-/* Gap: di norma resta silenzioso; il segnaposto è già nel TEI mediante supplied.
-   Evitiamo doppie diciture automatiche. */
+/* Il gap resta silenzioso: il segnale grafico è già fornito da supplied. */
 .gap::before,
 .GAP::before,
 span.gap::before,
@@ -109,7 +99,7 @@ tei-gap::before,
   content: "" !important;
 }
 
-/* Sic/corr: utile per eventuali interventi futuri */
+/* sic/corr */
 .sic,
 .SIC,
 span.sic,
@@ -128,128 +118,27 @@ tei-corr,
   font-style: italic !important;
 }
 
-/* ==========================================================
-   EVT 2 — correzione di sola impaginazione per MS Desc
-   Progetto: Lettera a Boddah attribuita a Kurt Cobain
-
-   Questa patch NON modifica:
-   - il parser EVT;
-   - il file XML-TEI;
-   - la struttura di msDesc;
-   - gli stili della trascrizione diplomatica.
-
-   Va aggiunta IN CODA al custom-style.css originale.
-   ========================================================== */
-
-/* Pannello MS Desc: scrolling regolare e margini interni */
-#msDesc {
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    box-sizing: border-box !important;
-
-    padding-top: 24px !important;
-    padding-right: 28px !important;
-    padding-bottom: 72px !important;
-    padding-left: 28px !important;
-
-    line-height: 1.45 !important;
+/* --------------------------------------------------------------
+   Citazioni
+   EVT 2 nasconde in alcune condizioni span.quote.
+   Forziamo la visualizzazione del testo della citazione e
+   rimuoviamo i piccoli marcatori grafici laterali.
+   -------------------------------------------------------------- */
+evt-quote span.quote,
+span.quote {
+  display: inline !important;
 }
 
-/* Il contenuto interno deve occupare la larghezza disponibile
-   senza essere tagliato ai bordi del pannello */
-#msDesc .msdesc {
-    display: block !important;
-    width: auto !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    padding-bottom: 52px !important;
+.quote sup.iconbis-evt_quote-left,
+.quote sup.iconbis-evt_quote-right {
+  display: none !important;
 }
 
-/* Paragrafi: evita righe troppo serrate e separazioni irregolari */
-#msDesc .p {
-    display: block !important;
-    margin-top: 0 !important;
-    margin-bottom: 10px !important;
-    line-height: 1.45 !important;
-}
-
-/* Sezioni principali già supportate nativamente da EVT */
-#msDesc .msidentifier,
-#msDesc .mscontents,
-#msDesc .physdesc,
-#msDesc .handdesc,
-#msDesc .typedesc,
-#msDesc .history,
-#msDesc .additional {
-    display: block !important;
-    clear: both !important;
-    width: auto !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-/* Spaziatura verticale coerente fra le sezioni */
-#msDesc .mscontents,
-#msDesc .physdesc,
-#msDesc .handdesc,
-#msDesc .typedesc,
-#msDesc .history,
-#msDesc .additional {
-    margin-top: 18px !important;
-    margin-bottom: 18px !important;
-}
-
-/* Evita che elementi di storia/provenienza restino attaccati */
-#msDesc .origin,
-#msDesc .provenance,
-#msDesc .acquisition {
-    display: block !important;
-    clear: both !important;
-    margin-top: 8px !important;
-    margin-bottom: 10px !important;
-}
-
-/* I blocchi descrittivi non devono essere troncati da float ereditati */
-#msDesc .supportdesc,
-#msDesc .objectdesc,
-#msDesc .layoutdesc,
-#msDesc .handnote,
-#msDesc .admininfo,
-#msDesc .recordhist,
-#msDesc .availability,
-#msDesc .surrogates {
-    display: block !important;
-    clear: both !important;
-    float: none !important;
-    width: auto !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-}
-
-/* Link lunghi (es. percorso del facsimile) vanno a capo
-   invece di allargare/tagliare il pannello */
-#msDesc a,
-#msDesc .ref,
-#msDesc .ptr {
-    overflow-wrap: anywhere !important;
-    word-break: break-word !important;
-}
-
-/* Margine finale reale: l'ultima riga non deve finire
-   contro il bordo inferiore del riquadro */
-#msDesc .msdesc::after {
-    content: "";
-    display: block;
-    clear: both;
-    height: 36px;
-}
-
-/* ==========================================================
-   EVT 2 — righe 39–42: attribuzione grafica controversa
-   Il colore segnala una controversia attributiva; non una
-   seconda mano accertata.
-   ========================================================== */
-
+/* --------------------------------------------------------------
+   Ultime quattro righe: attribuzione grafica controversa
+   Il rosso è una convenzione editoriale, non l'assegnazione
+   certa a una seconda mano.
+   -------------------------------------------------------------- */
 .orig[data-rend~="handwriting-disputed"],
 .orig[data-rend~="handwriting-disputed"] * {
   color: #9b1c1c !important;
