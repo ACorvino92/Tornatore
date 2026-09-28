@@ -703,7 +703,7 @@
         <lb xml:id="lb002" n="2" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z002"/>
           <choice><orig xml:lang="en">Speaking from the tongue of an experienced simpleton who obviously</orig><reg xml:lang="it" type="translation">Parlando con la lingua di un sempliciotto esperto che ovviamente</reg></choice>
         <lb xml:id="lb003" n="3" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z003"/><choice>
-          <orig xml:lang="en">would rather be an emasculated, infantile complain-ee. This note should</orig><reg xml:lang="it" type="translation">preferirebbe essere un lamentoso infantile ed evirato. Questa nota dovrebbe</reg></choice>
+          <orig xml:lang="en">would rather be an emasculated, infantile complain-ce. This note should</orig><reg xml:lang="it" type="translation">preferirebbe essere un lamentoso infantile ed evirato. Questa nota dovrebbe</reg></choice>
         <lb xml:id="lb004" n="4" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z004"/><choice>
           <orig xml:lang="en">be pretty easy to understand. All the warnings from the <term ref="#concept-punk-rock" key="concept-punk-rock">punk rock</term> 101</orig><reg xml:lang="it" type="translation">essere abbastanza facile da capire. Tutti gli avvertimenti dai corsi base di <term ref="#concept-punk-rock" key="concept-punk-rock">punk rock</term></reg></choice>
         <lb xml:id="lb005" n="5" facs="data/images/single/Lettera_di_Kurt_Cobain.jpg" corresp="#z005"/>
