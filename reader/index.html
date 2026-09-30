@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lettera a Boddah — Reader TEI</title>
+<style>
+:root{--paper:#f4f0e8;--ink:#211f1c;--soft:#6d655b;--rule:#cfc5b5;--accent:#5b2333}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:.8rem 1.25rem;border-bottom:1px solid var(--rule);background:#f4f0e8}
+.brand{font-family:Arial,sans-serif;font-size:.84rem}.brand strong{display:block;font-family:Georgia,serif;font-size:1rem}.evt{font-family:Arial,sans-serif;font-size:.76rem;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:.35rem .7rem}
+.hero{text-align:center;max-width:900px;margin:auto;padding:5rem 1rem 2.5rem}.hero p{font-family:Arial,sans-serif;color:var(--accent);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}.hero h1{margin:.35rem 0;font-size:clamp(2.8rem,8vw,5.5rem);font-weight:400;line-height:1}.hero small{display:block;color:var(--soft);font-size:1rem}
+.reader{width:min(960px,calc(100% - 2rem));margin:0 auto 4rem;border:1px solid var(--rule);border-radius:16px;background:rgba(255,255,255,.28);overflow:hidden}
+.toolbar{position:sticky;top:57px;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.15rem;border-bottom:1px solid var(--rule);background:#f4f0e8;font-family:Arial,sans-serif}.modes{display:flex;gap:.4rem;flex-wrap:wrap}.mode{border:1px solid var(--rule);border-radius:999px;background:transparent;padding:.48rem .8rem;cursor:pointer;font-size:.8rem}.mode.active{background:var(--ink);border-color:var(--ink);color:var(--paper)}#status{font-size:.76rem;color:var(--soft)}
+.intro{max-width:46rem;margin:2rem auto 1rem;padding:0 1.2rem;text-align:center;color:var(--soft);font-size:.94rem}.lines{list-style:none;max-width:48rem;margin:auto;padding:1rem 1.5rem 3rem}.line{display:grid;grid-template-columns:2.5rem 1fr;gap:.8rem;padding:.25rem 0}.n{font-family:Arial,sans-serif;color:#91877b;font-size:.69rem;text-align:right;padding-top:.16rem}.t{font-size:1.14rem}.line[data-disputed="true"] .n::after{content:" ·";color:var(--accent)}
+#error{margin:1rem 1.5rem 2rem;padding:1rem;border:1px solid #c98d95;border-radius:8px;background:#fff4f5;color:#6e1f2d;font-family:Arial,sans-serif;font-size:.88rem}footer{text-align:center;color:var(--soft);font:12px Arial,sans-serif;padding:0 1rem 3rem}
+@media(max-width:650px){.toolbar{top:57px;align-items:flex-start;flex-direction:column}.line{grid-template-columns:2rem 1fr}.lines{padding-inline:1rem}}
+</style>
+</head>
+<body>
+<header><div class="brand">Edizione digitale<strong>Lettera a Boddah</strong></div><a class="evt" href="../">EVT</a></header>
+<main>
+<section class="hero"><p>Kurt Cobain</p><h1>Lettera a Boddah</h1><small>Reader sperimentale derivato direttamente dal TEI dell'edizione.</small></section>
+<section class="reader">
+<div class="toolbar"><div class="modes"><button class="mode active" data-mode="diplomatic">Trascrizione diplomatica</button><button class="mode" data-mode="translation">Traduzione italiana</button></div><div id="status">Caricamento del TEI…</div></div>
+<div class="intro">Questa prima versione verifica un principio: il testo visualizzato non è copiato nell'interfaccia, ma viene letto dal file TEI già usato dall'edizione.</div>
+<ol id="lines" class="lines"></ol><div id="error" hidden></div>
+</section>
+</main>
+<footer>Prototipo reader v0.1 · fonte canonica: data/text/Cobain letter.xml</footer>
+<script>
+(()=>{'use strict';
+const REL='../data/text/Cobain%20letter.xml';
+const FALLBACK='https://raw.githubusercontent.com/ACorvino92/Tornatore/main/data/text/Cobain%20letter.xml';
+const TEI='http://www.tei-c.org/ns/1.0', XML='http://www.w3.org/XML/1998/namespace';
+const state={mode:'diplomatic',lines:[]};
+const box=document.getElementById('lines'),status=document.getElementById('status'),err=document.getElementById('error');
+const buttons=[...document.querySelectorAll('[data-mode]')];
+const clean=s=>String(s||'').replace(/\s+/g,' ').replace(/\s+([,.;:!?])/g,'$1').trim();
+const children=(p,n)=>[...p.children].filter(e=>e.namespaceURI===TEI&&e.localName===n);
+function choiceAfter(lb){let e=lb.nextElementSibling;while(e){if(e.namespaceURI===TEI&&e.localName==='lb')return null;if(e.namespaceURI===TEI&&e.localName==='choice')return e;e=e.nextElementSibling}return null}
+function parseLine(lb){const c=choiceAfter(lb);if(!c)throw Error('Nessun <choice> dopo '+(lb.getAttributeNS(XML,'id')||'una riga'));const o=children(c,'orig')[0],regs=children(c,'reg'),r=regs.find(x=>x.getAttribute('type')==='translation')||regs[0];if(!o||!r)throw Error('Orig/reg mancanti alla riga '+(lb.getAttribute('n')||'?'));const ana=lb.getAttribute('ana')||'',rend=lb.getAttribute('rend')||'';return{id:lb.getAttributeNS(XML,'id')||'',n:Number(lb.getAttribute('n'))||0,zone:(lb.getAttribute('corresp')||'').replace(/^#/,''),diplomatic:clean(o.textContent),translation:clean(r.textContent),disputed:ana.includes('handwriting-attribution-disputed')||rend.includes('handwriting-disputed')}}
+function parse(xml){if(xml.getElementsByTagName('parsererror')[0])throw Error('Il TEI non è XML ben formato.');const body=xml.getElementsByTagNameNS(TEI,'body')[0];if(!body)throw Error('Elemento <body> non trovato.');return [...body.getElementsByTagNameNS(TEI,'lb')].map(parseLine).sort((a,b)=>a.n-b.n)}
+function render(){const f=document.createDocumentFragment();state.lines.forEach(l=>{const li=document.createElement('li');li.className='line';li.dataset.disputed=l.disputed;li.dataset.zone=l.zone;const n=document.createElement('span');n.className='n';n.textContent=l.n;const t=document.createElement('span');t.className='t';t.lang=state.mode==='translation'?'it':'en';t.textContent=l[state.mode];li.append(n,t);f.append(li)});box.replaceChildren(f);status.textContent=state.lines.length+' righe · '+(state.mode==='translation'?'traduzione italiana':'trascrizione diplomatica')}
+function setMode(m){state.mode=m;buttons.forEach(b=>b.classList.toggle('active',b.dataset.mode===m));render()}
+async function getText(){try{const r=await fetch(REL,{cache:'no-store'});if(r.ok)return await r.text()}catch(e){}const r=await fetch(FALLBACK,{cache:'no-store'});if(!r.ok)throw Error('Impossibile caricare il TEI.');return await r.text()}
+async function load(){try{const src=await getText();state.lines=parse(new DOMParser().parseFromString(src,'application/xml'));err.hidden=true;render()}catch(e){console.error(e);status.textContent='Errore di caricamento';err.hidden=false;err.textContent=e.message}}
+buttons.forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));load();
+})();
+</script>
+</body>
+</html>
